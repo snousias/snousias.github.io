@@ -1,0 +1,1 @@
+User-agent: * Disallow: Sitemap: https://snousias.github.io/sitemap.xml
