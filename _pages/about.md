@@ -2,7 +2,8 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+# subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Postdoctoral Research Scientist at the Chair of Computational Modeling and Simulation, Technical University of Munich, Munich, Germany  
 
 profile:
   align: right
