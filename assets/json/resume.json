@@ -11,6 +11,7 @@
     {
       "name": "Technical University of Munich",
       "position": "Postdoctoral Research Scientist",
+      "location": "Munich, Germany",
       "startDate": "2022",
       "endDate": "2024",
       "summary": "Chair of Computational Modeling and Simulation"
@@ -18,21 +19,21 @@
     {
       "name": "Athena Research Center",
       "position": "Researcher",
-      "location": "Greece",
+      "location": "Athens, Greece",
       "startDate": "2020",
       "endDate": "2022"
     },
     {
       "name": "University of Patras",
       "position": "Research Associate",
-      "location": "Greece",
+      "location": "Patras, Greece",
       "startDate": "2019",
       "endDate": "2022"
     },
     {
       "name": "University of Patras",
       "position": "Research Assistant",
-      "location": "Greece",
+      "location": "Patras, Greece",
       "startDate": "2016",
       "endDate": "2019"
     }
