@@ -1,41 +1,36 @@
 {
   "basics": {
-    "name": "Stavros Nousias",
-    "label": "Postdoctoral Research Scientist",
+    "name": "Albert Einstein",
+    "label": "Scientist",
     "image": "",
-    "email": "stavros.nousias@tum.de",
-    "phone": "+49 176 200 398 53",
+    "email": "albert@einstein.de",
+    "phone": "(912) 123-4567",
     "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time"
+    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "location": {
+      "address": "2712 Broadway St",
+      "postalCode": "CA 94115",
+      "city": "San Francisco",
+      "countryCode": "US",
+      "region": "California"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "AlbertEinstein",
+        "url": "https://twitter.com/AlbertEinstein"
+      }
+    ]
   },
   "work": [
     {
-      "name": "Technical University of Munich",
-      "position": "Postdoctoral Research Scientist",
-      "startDate": "2022",
-      "endDate": "2024",
-      "summary": "Chair of Computational Modeling and Simulation"
-    },
-    {
-      "name": "Athena Research Center",
-      "position": "Researcher",
-      "location": "Greece",
-      "startDate": "2020",
-      "endDate": "2022"
-    },
-    {
-      "name": "University of Patras",
-      "position": "Research Associate",
-      "location": "Greece",
-      "startDate": "2019",
-      "endDate": "2022"
-    },
-    {
-      "name": "University of Patras",
-      "position": "Research Assistant",
-      "location": "Greece",
-      "startDate": "2016",
-      "endDate": "2019"
+      "name": "Institute for Advanced Study, Princeton University",
+      "position": "Professor of Theoretical Physics",
+      "url": "https://example.com",
+      "startDate": "1933-01-01",
+      "endDate": "1955-01-01",
+      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "highlights": ["Relativity"]
     }
   ],
   "volunteer": [
@@ -52,28 +47,15 @@
   ],
   "education": [
     {
-      "institution": "University of Patras",
-      "location": "Greece",
-      "area": "Electrical & Computer Engineering",
+      "institution": "University of Zurich, Zurich, Switzerland",
+      "location": "Zurich, Switzerland",
+      "url": "https://www.uzh.ch/",
+      "area": "Software Development",
       "studyType": "PhD",
-      "startDate": "",
-      "endDate": "2022"
-    },
-    {
-      "institution": "University of Patras",
-      "location": "Greece",
-      "area": "Electronics & Information Processing",
-      "studyType": "M.Sc.",
-      "startDate": "",
-      "endDate": "2016"
-    },
-    {
-      "institution": "University of Patras",
-      "location": "Greece",
-      "area": "Electrical & Computer Engineering",
-      "studyType": "Diploma",
-      "startDate": "",
-      "endDate": "2011"
+      "startDate": "1905-01-01",
+      "endDate": "1905-01-01",
+      "score": "10",
+      "courses": ["Theory of Relativity"]
     }
   ],
   "awards": [
@@ -169,12 +151,14 @@
   ],
   "languages": [
     {
-      "language": "English",
-      "fluency": "Fluent"
+      "language": "German",
+      "fluency": "Native speaker",
+      "icon": ""
     },
     {
-      "language": "German",
-      "fluency": "Fluent"
+      "language": "English",
+      "fluency": "Fluent",
+      "icon": ""
     }
   ],
   "interests": [
