@@ -12,3 +12,7 @@ _sass/tabler-icons/*.scss
 _scripts/search.liquid.js
 _site/**
 .github/workflows/**
+_config.yml
+_pages/about.md
+.vscode/settings.json
+INSTALL.md
