@@ -5,7 +5,7 @@
     "image": "",
     "email": "stavros.nousias@tum.de",
     "url": "https://www.cee.ed.tum.de/cms/team/stavros-nousias/",
-    "summary": "Computer Scientist with a focus on Geometry Processing, Machine Learning, and Computer Vision."
+    "summary": "Computer Scientist with a focus on Geometry Processing, 3D Machine Learning, and Computer Vision."
   },
   "work": [
     {
@@ -13,7 +13,7 @@
       "position": "Postdoctoral Research Scientist",
       "location": "Munich, Germany",
       "startDate": "2022",
-      "summary": "Chair of Computational Modeling and Simulation"
+      "summary": "Chair of Computational Modeling and Simulation / Chair of Computing in Civil and Building Engineering"
     },
     {
       "name": "Athena Research Center",
@@ -86,6 +86,10 @@
     {
       "language": "German",
       "fluency": "Intermediate"
+    },
+    {
+      "language": "Greek",
+      "fluency": "Native"
     }
   ],
   "interests": [
