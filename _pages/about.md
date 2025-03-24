@@ -38,7 +38,7 @@ Put your address / P.O. box / other info right below your picture. You can also 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
 
-Dr. Stavros Nousias is a research scientist working in geometry processing, machine learning and computer vision. Born and raised in Ioannina, Greece, he completed his education at the University of Patras, earning his Diploma in Electrical & Computer Engineering, M.Sc. in Electronics & Information Processing, and Ph.D. in 2011, 2016, and 2022 respectively.
+Dr. Stavros Nousias is a research scientist with a research focus in computational modelling, geometry processing, machine learning and computer vision. Born and raised in Ioannina, Greece, he completed his education at the University of Patras, earning his Diploma in Electrical & Computer Engineering, M.Sc. in Electronics & Information Processing, and Ph.D. in 2011, 2016, and 2022 respectively.
 
 He has worked on several European Union Horizon 2020 and national research projects, progressing from software engineer to research lead. These projects include MyAirCoach, GamECAR, Ageing@Work, Take-a-Breath, CPSoSaware, EnerMan, and Warmest (Marie Skłodowska-Curie Actions). He also contributed to the Collaborative Construction initiative at the Technical University of Munich's Innovation Network.
 
