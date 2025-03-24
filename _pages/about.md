@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 # subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-subtitle: <a href='https://www.cee.ed.tum.de/cms/team/stavros-nousias/' target="_blank">Postdoctoral Research Scientist at the Chair of Computational Modeling and Simulation, Technical University of Munich </a><br> Arcisstrasse 21, 80333 Munich, Germany  
+subtitle: <a href='https://www.cee.ed.tum.de/cms/team/stavros-nousias/' target="_blank">Postdoctoral Research Scientist at the Chair of Civil and Building Engineering, of the School of Engineering and Design of the Technical University of Munich </a><br> Arcisstrasse 21, 80333 Munich, Germany  
 
 profile:
   align: right
