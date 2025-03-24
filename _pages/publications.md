@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Publications by categories in reversed chronological order. An up-to-date list is available on <a href="https://scholar.google.com/citations?user=HQuAxd0AAAAJ&hl=en" target="_blank">Google Scholar</a>.
+description: Publications by categories in reversed chronological order.
 years: [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2016]
 nav: true
 nav_order: 1
