@@ -23,4 +23,8 @@ nav_order: 1
   {% bibliography -f papers -q @*[category_1=GDL]* %}
 
 
+  <h4 class="year">Computational modelling for Biomedical Engineering</h4>
+
+  {% bibliography -f papers -q @*[category_1=BME]* %}
+
 </div>
