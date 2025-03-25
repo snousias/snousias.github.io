@@ -17,7 +17,9 @@ nav_order: 1
 <div class="publications">
 
 
-  <h4 class="year">Geometric Deep Learning</h4>
+  <h4 class="year">3D Machine learning</h4>
+  <h5 class="year">Representation learning for 3D meshes </h5>
+
   {% bibliography -f papers -q @*[category=GDL]* %}
 
 
