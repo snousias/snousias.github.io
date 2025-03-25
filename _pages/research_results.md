@@ -4,7 +4,6 @@ permalink: /results/
 title: research results
 description: Publications presented by categories in reversed chronological order.
 years: [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2016]
-categories: ["AIBE"]
 nav: true
 nav_order: 1
 ---
@@ -15,11 +14,9 @@ nav_order: 1
 
 <div class="publications">
 
-{%- for c in page.categories %}
 
-  <h2 class="year">{{c}}</h2>
-  {% bibliography -f papers -q @*[category={{c}}]* %}
+  <h2 class="year">Geometric Deep Learning</h2>
+  {% bibliography -f papers -q @*[category="GDL"]* %}
 
-{% endfor %}
 
 </div>
