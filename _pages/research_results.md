@@ -16,7 +16,8 @@ nav_order: 1
 
 <div class="publications">
 
-  <h4 class="year" style="padding-top:2em">3D Machine learning</h4>
+  <h4 class="year" style="padding-top:2em">3D Machine learning  
+  and Computer Vision</h4>
   <h5 class="year">Representation learning for 3D meshes </h5>
 
   {% bibliography -f papers -q @*[category_1=GDL]* %}
@@ -37,5 +38,9 @@ nav_order: 1
     <h4 class="year" style="padding-top:2em">Intelligent Cyber-Physical Systems and Efficient AI</h4>
 
   {% bibliography -f papers -q @*[category_1=CPS]* %}
+
+  <h4 class="year" style="padding-top:2em">Your New Section Title</h4>
+
+  {% bibliography -f papers -q @*[category_1=YOUR_NEW_CATEGORY]* %}
 
 </div>
