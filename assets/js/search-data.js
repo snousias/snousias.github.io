@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-research-results",
+          title: "research results",
+          description: "Publications presented by categories in reversed chronological order.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/results/";
+          },
         },{id: "nav-cv",
           title: "cv",
           description: "",
