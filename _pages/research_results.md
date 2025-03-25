@@ -19,7 +19,7 @@ nav_order: 1
 
 {%- for c in page.categories %}
 
-  <h2 class="year">{{y}}</h2>
+  <h2 class="year">{{c}}</h2>
   {% bibliography -f papers -q @*[category={{c}}]* %}
 
 {% endfor %}
