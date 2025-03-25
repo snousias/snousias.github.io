@@ -16,7 +16,7 @@ nav_order: 1
 
 
   <h2 class="year">Geometric Deep Learning</h2>
-  {% bibliography -f papers -q @*[category={{GDL}}]* %}
+  {% bibliography -f papers -q @*[category={"GDL"}]* %}
 
 
 </div>
