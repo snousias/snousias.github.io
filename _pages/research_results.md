@@ -16,15 +16,22 @@ nav_order: 1
 
 <div class="publications">
 
-
   <h4 class="year" style="padding-top:2em">3D Machine learning</h4>
   <h5 class="year">Representation learning for 3D meshes </h5>
 
   {% bibliography -f papers -q @*[category_1=GDL]* %}
 
 
+  <h4 class="year" style="padding-top:2em">AI & Machine Learning in the Built Environment</h4>
+
+  {% bibliography -f papers -q @*[category_1=AIBE]* %}
+
   <h4 class="year" style="padding-top:2em">Computational modelling for Biomedical Engineering</h4>
 
   {% bibliography -f papers -q @*[category_1=BME]* %}
+
+  <h4 class="year" style="padding-top:2em">Machine Learning for Healthcare and Medicine</h4>
+
+  {% bibliography -f papers -q @*[category_1=MLHM]* %}
 
 </div>
