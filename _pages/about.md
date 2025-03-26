@@ -31,17 +31,20 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Dr. Stavros Nousias is a research scientist with a research focus in computational modelling, machine learning, geometry processing and geometric deep learning and computer vision. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Born and raised in Ioannina, Greece, he completed his education at the University of Patras, earning his Diploma in Electrical & Computer Engineering, M.Sc. in Electronics & Information Processing, and Ph.D. in 2011, 2016, and 2022 respectively.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+He participated in multiple European and National research projects assuming progressively the roles of software engineer and systems developer, research engineer, research associate and research lead:
 
+- MyAirCoach (EU H2020 Grant agreement ID: 643607),
+- GamECAR (EU H2020 Grant agreement ID: 732068), 
+- Ageing@Work (EU H2020 Grant agreement ID: 826299),
+- Take-a-Breath (NSRF 2014-2020 project code:T1EDK - 03832) , 
+-CPSoSaware (H2020 Grant agreement ID: 871738),
+- EnerMan (H2020 Grant agreement ID: 958478)
+- Warmest( Marie Skłodowska-Curie Actions Grant agreement ID: 777981 )
+- CoConstruct Collaborative Construction (Innovation Network of the Technical University of Munich)
 
-Dr. Stavros Nousias is a research scientist with a research focus in computational modelling, geometry processing, machine learning and computer vision. Born and raised in Ioannina, Greece, he completed his education at the University of Patras, earning his Diploma in Electrical & Computer Engineering, M.Sc. in Electronics & Information Processing, and Ph.D. in 2011, 2016, and 2022 respectively.
+His technical skills include C++ (OpenCV, Boost, CGAL) and Python (TensorFlow, Keras, PyTorch, Scikit-learn) while baring project-oriented experience with R, Julia, SQL, PHP, Javascript.
 
-He has worked on several European Union Horizon 2020 and national research projects, progressing from software engineer to research lead. These projects include MyAirCoach, GamECAR, Ageing@Work, Take-a-Breath, CPSoSaware, EnerMan, and Warmest (Marie Skłodowska-Curie Actions). He also contributed to the Collaborative Construction initiative at the Technical University of Munich's Innovation Network.
-
-His technical skills include C++ (OpenCV, Boost, CGAL) and Python (TensorFlow, Keras, PyTorch, Scikit-learn). He has also worked with R, Julia, SQL, PHP, JavaScript, and AngularJS across various projects.
-
-His research focuses on computational modeling and simulation, machine learning, feature learning, geometric deep learning, and graph neural networks.
