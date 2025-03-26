@@ -39,8 +39,4 @@ nav_order: 1
 
   {% bibliography -f papers -q @*[category_1=CPS]* %}
 
-  <h4 class="year" style="padding-top:2em">Your New Section Title</h4>
-
-  {% bibliography -f papers -q @*[category_1=YOUR_NEW_CATEGORY]* %}
-
 </div>
