@@ -40,8 +40,8 @@ He participated in multiple European and National research projects assuming pro
 - MyAirCoach (EU H2020 Grant agreement ID: 643607),
 - GamECAR (EU H2020 Grant agreement ID: 732068), 
 - Ageing@Work (EU H2020 Grant agreement ID: 826299),
-- Take-a-Breath (NSRF 2014-2020 project code:T1EDK - 03832) , 
--CPSoSaware (H2020 Grant agreement ID: 871738),
+- Take-a-Breath (NSRF 2014-2020 project code:T1EDK - 03832),
+- CPSoSaware (H2020 Grant agreement ID: 871738),
 - EnerMan (H2020 Grant agreement ID: 958478)
 - Warmest( Marie Skłodowska-Curie Actions Grant agreement ID: 777981 )
 - CoConstruct Collaborative Construction (Innovation Network of the Technical University of Munich)
