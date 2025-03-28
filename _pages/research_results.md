@@ -15,7 +15,7 @@ nav_order: 1
 {% include bib_search.liquid %}
 
 ## Table of contents
-- [Representation learning for 3D meshes](https://snousias.github.io/#GDL)
+- [Representation learning for 3D meshes](/results/#GDL)
 
 <div class="publications">
 
