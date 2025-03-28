@@ -5,7 +5,7 @@ github_users:
 repo_description_lines_max: 10
 
 github_repos:
-  - snousias//mesh-saliency-detection-using-convolutional-neural-networks
+  - snousias/mesh-saliency-detection-using-convolutional-neural-networks
   - snousias/avatree
-  - fast-mesh-denoising
+  - snousias/fast-mesh-denoising
 
