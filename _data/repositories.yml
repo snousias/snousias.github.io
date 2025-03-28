@@ -2,8 +2,10 @@ github_users:
   - snousias
 
 
-repo_description_lines_max: 2
+repo_description_lines_max: 10
 
 github_repos:
-  - snousias/mesh-saliency-detection
+  - snousias//mesh-saliency-detection-using-convolutional-neural-networks
+  - snousias/avatree
+  - fast-mesh-denoising
 
