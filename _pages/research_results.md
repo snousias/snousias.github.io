@@ -10,12 +10,12 @@ nav_order: 1
 
 <!-- _pages/research_results.md -->
 
-<!-- Bibsearch Feature -->
-
-{% include bib_search.liquid %}
-
 ## Table of contents
 - [Representation learning for 3D meshes](/results/#GDL)
+- [AI & Machine Learning in the Built Environment](/results/#AIBE)
+- [Computational Modelling and Simulation in Biomedical Engineering](/results/#BME)
+- [Machine Learning for Healthcare and Medicine](/results/#MLHM)
+- [Intelligent Cyber-Physical Systems and Efficient AI](/results/#CPS)
 
 <div class="publications">
 
@@ -30,7 +30,7 @@ nav_order: 1
 
   {% bibliography -f papers -q @*[category_1=AIBE]* %}
 
-  <h4 class="year" id="BME" style="padding-top:2em">Computational modelling for Biomedical Engineering</h4>
+  <h4 class="year" id="BME" style="padding-top:2em">Computational Modelling and Simulation in Biomedical Engineering</h4>
 
   {% bibliography -f papers -q @*[category_1=BME]* %}
 
