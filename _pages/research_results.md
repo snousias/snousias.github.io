@@ -10,7 +10,7 @@ nav_order: 1
 
 <!-- _pages/research_results.md -->
 
-## Table of contents
+### table of contents
 - [Representation learning for 3D meshes](/results/#GDL)
 - [AI & Machine Learning in the Built Environment](/results/#AIBE)
 - [Computational Modelling and Simulation in Biomedical Engineering](/results/#BME)
