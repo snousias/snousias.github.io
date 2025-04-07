@@ -46,5 +46,5 @@ He participated in multiple European and National research projects assuming pro
 - Warmest( Marie Skłodowska-Curie Actions Grant agreement ID: 777981 )
 - CoConstruct Collaborative Construction (Innovation Network of the Technical University of Munich)
 
-His technical skills include C++ (OpenCV, Boost, CGAL) and Python (TensorFlow, Keras, PyTorch, Scikit-learn) while baring project-oriented experience with R, Julia, SQL, PHP, Javascript.
+
 
