@@ -40,7 +40,7 @@ nav_order: 1
 
   <h4 class="year" id="CPS" style="padding-top:2em">Intelligent Cyber-Physical Systems and Efficient AI</h4>
 
-  {% bibliography -f papers -q @*[category_1=CPS]* %}
+  {% bibliography -f papers -q @*[category_1=CPS || category_2=CPS]* %}
 
 
 
