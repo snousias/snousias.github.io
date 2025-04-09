@@ -44,11 +44,11 @@ toc:
 
   {% bibliography -f papers -q @*[category_1=CPS || category_2=CPS]* %}
 
-  <h4 class="year" id="CPS" style="padding-top:2em">Model Compression and Acceleration in DNNs</h4>
+  <h4 class="year" id="MCA" style="padding-top:2em">Model Compression and Acceleration in DNNs</h4>
 
   {% bibliography -f papers -q @*[category_1=MCA || category_2=MCA]* %}
 
-  <h4 class="year" id="CPS" style="padding-top:2em">Sparse Modelling for Data Imputation</h4>
+  <h4 class="year" id="MCDI" style="padding-top:2em">Sparse Modelling for Data Imputation</h4>
 
   {% bibliography -f papers -q @*[category_1=MCDI || category_2=MCDI]* %}
 
