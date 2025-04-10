@@ -36,8 +36,11 @@ toc:
   {% bibliography -f papers -q @*[category_1=AIBE || category_2=AIBE]* %}
 
   <h4 class="year" id="PHD" style="padding-top:2em">Doctoral dissertation</h4>
-  
-  Research in **Computational Modelling and Simulation in Biomedical Engineering** / **AI and Machine Learning in Healthcare and Medicine**
+
+  Research in:
+
+  - <strong>Computational Modelling and Simulation in Biomedical Engineering</strong>
+  - <strong>AI and Machine Learning in Healthcare and Medicine</strong>
 
   {% bibliography -f papers -q @*[category_1=PHD || category_2=PHD]* %}
 
