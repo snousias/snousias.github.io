@@ -37,10 +37,11 @@ toc:
 
   <h4 class="year" id="PHD" style="padding-top:2em">Doctoral dissertation</h4>
 
-  Research in:
-
-  - <strong>Computational Modelling and Simulation in Biomedical Engineering</strong>
-  - <strong>AI and Machine Learning in Healthcare and Medicine</strong>
+  <p>Research in:</p>
+  <ul>
+    <li><strong>Computational Modelling and Simulation in Biomedical Engineering</strong></li>
+    <li><strong>AI and Machine Learning in Healthcare and Medicine</strong></li>
+  </ul>
 
   {% bibliography -f papers -q @*[category_1=PHD || category_2=PHD]* %}
 
