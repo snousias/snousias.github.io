@@ -51,7 +51,7 @@ toc:
 
   <h4 class="year" id="MLHM" style="padding-top:2em">Machine Learning for Healthcare and Medicine</h4>
 
-  {% bibliography -f papers -q @*[category_1=MLHM || category_2=MLHM]* %}
+  {% bibliography -f papers -q @*[category_1=MLHM || category_2=MLHM  || category_3=MLHM]* %}
 
   <h4 class="year" id="CPS" style="padding-top:2em">Intelligent Cyber-Physical Systems and Efficient AI</h4>
 
