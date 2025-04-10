@@ -15,6 +15,7 @@ toc:
 ### table of contents
 - [Representation learning for 3D meshes](/results/#GDL)
 - [AI & Machine Learning in the Built Environment](/results/#AIBE)
+- [Doctoral Dissertation](/results/#PHD)
 - [Computational Modelling and Simulation in Biomedical Engineering](/results/#BME)
 - [Machine Learning for Healthcare and Medicine](/results/#MLHM)
 - [Intelligent Cyber-Physical Systems and Efficient AI](/results/#CPS)
@@ -27,20 +28,24 @@ toc:
   and Computer Vision</h4>
   <h5 class="year">Representation learning for 3D meshes </h5>
 
-  {% bibliography -f papers -q @*[category_1=GDL]* %}
+  {% bibliography -f papers -q @*[category_1=GDL || category_2=GDL]* %}
 
 
   <h4 class="year" id="AIBE" style="padding-top:2em">AI & Machine Learning in the Built Environment</h4>
 
-  {% bibliography -f papers -q @*[category_1=AIBE]* %}
+  {% bibliography -f papers -q @*[category_1=AIBE || category_2=AIBE]* %}
+
+  <h4 class="year" id="PHD" style="padding-top:2em">Doctoral dissertation</h4>
+
+  {% bibliography -f papers -q @*[category_1=PHD || category_2=PHD]* %}
 
   <h4 class="year" id="BME" style="padding-top:2em">Computational Modelling and Simulation in Biomedical Engineering</h4>
 
-  {% bibliography -f papers -q @*[category_1=BME]* %}
+  {% bibliography -f papers -q @*[category_1=BME || category_2=BME]* %}
 
   <h4 class="year" id="MLHM" style="padding-top:2em">Machine Learning for Healthcare and Medicine</h4>
 
-  {% bibliography -f papers -q @*[category_1=MLHM]* %}
+  {% bibliography -f papers -q @*[category_1=MLHM || category_2=MLHM]* %}
 
   <h4 class="year" id="CPS" style="padding-top:2em">Intelligent Cyber-Physical Systems and Efficient AI</h4>
 
