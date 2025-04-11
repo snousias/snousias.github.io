@@ -18,7 +18,6 @@ toc:
 - [Doctoral Dissertation](/results/#PHD)
 - [Computational Modelling and Simulation in Biomedical Engineering](/results/#BME)
 - [Machine Learning for Healthcare and Medicine](/results/#MLHM)
-- [Intelligent Cyber-Physical Systems and Efficient AI](/results/#CPS)
 - [Model Compression and Acceleration in DNNs](/results/#MCA)
 - [Sparse Modelling for Data Imputation](/results/#MCDI)
 
