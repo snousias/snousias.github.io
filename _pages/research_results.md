@@ -13,7 +13,7 @@ toc:
 <!-- _pages/research_results.md -->
 
 ### table of contents
-- [Representation learning for 3D meshes](/results/#GDL)
+- [3D Machine learning and Computer Vision](/results/#GDL)
 - [AI & Machine Learning in the Built Environment](/results/#AIBE)
 - [Doctoral Dissertation](/results/#PHD)
 - [Computational Modelling and Simulation in Biomedical Engineering](/results/#BME)
@@ -26,7 +26,6 @@ toc:
 
   <h4 class="year" id="GDL" style="padding-top:2em">3D Machine learning  
   and Computer Vision</h4>
-  <h5 class="year">Representation learning for 3D meshes </h5>
 
   {% bibliography -f papers -q @*[category_1=GDL || category_2=GDL]* %}
 
