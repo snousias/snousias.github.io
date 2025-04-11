@@ -62,8 +62,8 @@ toc:
   {% bibliography -f papers -q @*[category_1=MCDI || category_2=MCDI]* %}
 
 
-  <h4 class="year" id="CPS" style="padding-top:2em">Intelligent Cyber-Physical Systems</h4>
+  <!-- <h4 class="year" id="CPS" style="padding-top:2em">Intelligent Cyber-Physical Systems</h4>
 
-  {% bibliography -f papers -q @*[category_1=CPS || category_2=CPS]* %}
+  {% bibliography -f papers -q @*[category_1=CPS || category_2=CPS]* %} -->
 
 </div>
