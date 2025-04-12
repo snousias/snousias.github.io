@@ -4,7 +4,7 @@ permalink: /teaching/
 title: teaching
 description: Academic teaching positions in chronological order.
 nav: true
-nav_order: 5
+nav_order: 6
 ---
 
 ## Technical University of Munich
