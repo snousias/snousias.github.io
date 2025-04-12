@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2025-04-12 15:59:00-0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+New preprint on ["Predictive Modeling: BIM Command Recommendation Based on Large-scale Usage Logs"](https://arxiv.org/abs/2504.05319)!
