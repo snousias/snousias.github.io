@@ -7,21 +7,20 @@ nav: true
 nav_order: 5
 ---
 
-## Massachusetts Institute of Technology
+## Technical University of Munich
 
-### Principles of Autonomy and Decision Making <span class="course-code">16.410</span>
+### AI in Engineering <span class="course-code">BGU65009</span>
 
-*Fall 2024: Instructor*
+*Since Spring 2023: Instructor*
 
-16.410 is an intermediate introduction to autonomy and decision making, covering search algorithms, game trees, Markov decision processes, reinforcement learning, probabilistic graphical modeling, model-based reasoning, and machine learning.
+AIE is a master's elective course focusing on Machine Learning and Artificial Intelligence and their applications in problems in Engineering . Students explore Machine Learning, Deep Learning, Deep Computer Vision and Advanced topics building practical skills through hands-on robotic programming assignments. The course bridges theoretical AI concepts with real-world engineering challenges, enabling students to implement AI solutions in collaborative team projects.
 
-## University of California, Berkeley
 
-### Algorithmic Foundations of Human-Robot Interaction <span class="course-code">CS 287H</span>
+### Computation in Engineering 1 <span class="course-code">BGU44013T2</span>
 
-*Spring 2021: Graduate Student Instructor*
+*Since Winter 2024: Instructor*
 
-CS 287H is a graduate-level introduction to algorithmic HRI that combines lectures with paper presentations by students, encouraging both fundamental knowledge acquisition and open-ended discussions. As a TA, I created weekly quizzes, developed hands-on homework programming assignments, brainstormed and provided feedback on project proposals, graded all materials in the course, and helped run of the lectures.
+Computation in Engineering 1 is a master's course teaching object-oriented programming in C++ and geometric modeling for engineering applications. Students learn to develop algorithms, implement UML models, and understand CAD systems through lectures and hands-on exercises. The course builds computational skills essential for modern engineering practice and concludes with a comprehensive semester project.
 
 <style>
 .course-code {
