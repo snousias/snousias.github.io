@@ -46,13 +46,16 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
+          description: "Academic teaching positions in chronological order.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+        },{id: "news-new-preprint-on-text2bim-generating-building-models-using-a-large-language-model-based-multi-agent-framework",
+          title: 'New preprint on “Text2BIM: Generating Building Models Using a Large Language Model-based Multi-Agent...',
+          description: "",
+          section: "News",},{id: "news-new-preprint-on-predictive-modeling-bim-command-recommendation-based-on-large-scale-usage-logs",
+          title: 'New preprint on “Predictive Modeling: BIM Command Recommendation Based on Large-scale Usage Logs”!...',
           description: "",
           section: "News",},{
         id: 'social-dblp',
