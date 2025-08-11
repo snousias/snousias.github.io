@@ -60,7 +60,7 @@ toc:
 
   {% bibliography -f papers -q @*[category_1=MCDI || category_2=MCDI]* %}
 
-  <h4 class="year" id="MCDI" style="padding-top:2em">Application : Gamification</h4>
+  <h4 class="year" id="Gamification" style="padding-top:2em">Application : Gamification</h4>
 
   {% bibliography -f papers -q @*[category_1=Gamification || category_2=Gamification]* %}
 
