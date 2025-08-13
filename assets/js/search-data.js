@@ -64,9 +64,9 @@ ninja.data = [{
           section: "News",},{id: "news-new-preprint-on-predictive-modeling-bim-command-recommendation-based-on-large-scale-usage-logs",
           title: 'New preprint on “Predictive Modeling: BIM Command Recommendation Based on Large-scale Usage Logs”!...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-myaircoach",
+          title: 'myAirCoach',
+          description: "Analysis, modelling and sensing of both physiological and environmental factors for the customized and predictive self-management of Asthma",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{
