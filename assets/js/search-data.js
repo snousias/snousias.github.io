@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -68,7 +68,7 @@ ninja.data = [{
           title: 'myAirCoach',
           description: "Analysis, modelling and sensing of both physiological and environmental factors for the customized and predictive self-management of Asthma",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
+              window.location.href = "/projects/myAirCoach/";
             },},{
         id: 'social-dblp',
         title: 'DBLP',
