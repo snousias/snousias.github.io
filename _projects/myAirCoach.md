@@ -12,12 +12,6 @@ related_publications: true
 
 **Full Title**: Analysis, modelling and sensing of both physiological and environmental factors for the customized and predictive self-management of Asthma
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/12.jpg" title="myAirCoach Project Logo" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-
 ## Project Timeline
 
 - **Start date**: 1 January 2015
