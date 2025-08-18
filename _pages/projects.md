@@ -2,14 +2,14 @@
 layout: page
 title: projects
 permalink: /projects/
-description: 
+description: Page under construction
 nav: true
 nav_order: 3
 display_categories: [work, fun]
 horizontal: false
 ---
 
-<!--
+
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   {% for category in page.display_categories %}
@@ -59,4 +59,4 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
--->
+
