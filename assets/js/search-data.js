@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "news-new-preprint-on-text2bim-generating-building-models-using-a-large-language-model-based-multi-agent-framework",
+        },{id: "post-a-post-with-math",
+      
+        title: "a post with math",
+      
+      description: "an example of a blog post with some math",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2015/math/";
+        
+      },
+    },{id: "news-new-preprint-on-text2bim-generating-building-models-using-a-large-language-model-based-multi-agent-framework",
           title: 'New preprint on “Text2BIM: Generating Building Models Using a Large Language Model-based Multi-Agent...',
           description: "",
           section: "News",},{id: "news-new-preprint-on-predictive-modeling-bim-command-recommendation-based-on-large-scale-usage-logs",
