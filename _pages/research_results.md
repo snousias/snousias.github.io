@@ -20,6 +20,7 @@ toc:
 - [Machine Learning for Healthcare and Medicine](/results/#MLHM)
 - [Model Compression and Acceleration in DNNs](/results/#MCA)
 - [Sparse Modelling for Data Imputation](/results/#MCDI)
+- [Application : Gamification](/results/#Gamification)
 
 <div class="publications">
 
