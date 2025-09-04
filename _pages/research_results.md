@@ -36,8 +36,8 @@ toc:
 
   <h4 class="year" id="PHD" style="padding-top:2em">Doctoral dissertation</h4>
 
-  <p><strong>PhD in Analysis, Modelling and Simulation for mHealth Application</strong></p>
-  <p>Research topics:</p>
+  <p><strong>PhD in Analysis, Modelling and Simulation for mHealth Applications</strong></p>
+  <p><strong>Research topics:</strong></p>
   <ul>
     <li><strong>Computational Modelling and Simulation in Biomedical Engineering</strong></li>
     <li><strong>AI and Machine Learning in Healthcare and Medicine</strong></li>
