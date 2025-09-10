@@ -16,14 +16,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "dropdown-funding",
-              title: "funding",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "nav-cv",
+        },{id: "nav-research-results",
+          title: "research results",
+          description: "Selected publications presented in chronological order.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/results/";
+          },
+        },{id: "nav-cv",
           title: "cv",
           description: "",
           section: "Navigation",
