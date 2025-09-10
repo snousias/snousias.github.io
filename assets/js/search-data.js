@@ -9,7 +9,14 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
+  },{id: "nav-funding-mandates",
+          title: "funding mandates",
+          description: "Selected publications presented in chronological order.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/funding/";
+          },
+        },{id: "nav-publications",
           title: "publications",
           description: "Publications presented by categories in reversed chronological order.",
           section: "Navigation",
