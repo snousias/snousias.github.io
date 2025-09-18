@@ -49,7 +49,7 @@ toc:
 
   {% bibliography -f papers -q @*[category_1=PHD || category_2=PHD]* %}
 
-  <h4 class="year" id="BME" style="padding-top:2em">Computational Modelling and Simulation in Biomedical Engineering</h4>
+  <h4 class="year" id="BME" style="padding-top:2em">Computational Methods in Biomedical Engineering</h4>
 
   {% bibliography -f papers -q @*[category_1=BME || category_2=BME]* %}
 
