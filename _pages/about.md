@@ -32,10 +32,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Dr. Stavros Nousias is a computer scientist, postdoctoral researcher, and research lead of the Knowledge Representation and Reasoning research group within the Chair of Computing in Civil and Building Engineering at the Technical University of Munich.
+Dr. Stavros Nousias leads the Knowledge Representation and Reasoning research group at TUM's Chair of Computing in Civil and Building Engineering. He holds a Diploma in Electrical and Computer Engineering, an M.Sc. in Electronics and Information Processing, and a Ph.D. from the University of Patras (2011, 2016, 2022). Over his career across European and national projects, he's worked as a software engineer, systems developer, research engineer, research associate and research lead. 
 
-He earned his Diploma in Electrical and Computer Engineering, M.Sc. in Electronics and Information Processing, and Ph.D. from the University of Patras in 2011, 2016, and 2022, respectively. He has contributed to numerous European and national research projects, progressively serving as a software engineer and systems developer, research engineer, research associate, and research lead. 
-His research focuses on representation learning, computational modelling, machine learning, geometry processing, geometric deep learning, and computer vision.
+His work focuses on representation learning, computational modelling, machine learning, geometry processing, geometric deep learning, and computer vision.
 
 <div style="margin: 2rem 0;">
 <p><i class="fas fa-tags" aria-hidden="true"></i> Keywords</p>
