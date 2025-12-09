@@ -5,6 +5,7 @@ repo_description_lines_max: 10
 github_repos:
   - snousias/mesh-saliency-detection-using-convolutional-neural-networks
   - snousias/avatree
+  - snousias/hodgeformer
   - snousias/fast-mesh-denoising
   - snousias/Multimodal-fusion-driven-automotive-scene-analysis
   - snousias/Robust-and-fast-3-D-saliency-mapping
