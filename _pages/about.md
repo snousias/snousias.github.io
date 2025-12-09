@@ -37,6 +37,7 @@ Dr. Stavros Nousias is a computer scientist, postdoctoral researcher, and resear
 He earned his Diploma in Electrical and Computer Engineering, M.Sc. in Electronics and Information Processing, and Ph.D. from the University of Patras in 2011, 2016, and 2022, respectively. He has contributed to numerous European and national research projects, progressively serving as a software engineer and systems developer, research engineer, research associate, and research lead. 
 His research focuses on representation learning, computational modelling, machine learning, geometry processing, geometric deep learning, and computer vision.
 
+<div style="margin: 2rem 0;">
 <p><i class="fas fa-tags" aria-hidden="true"></i> Keywords</p>
 <div class="badges">
   <span class="badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Representation Learning</span>
@@ -46,7 +47,7 @@ His research focuses on representation learning, computational modelling, machin
   <span class="badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Computer Vision</span>
   <span class="badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Computational Modelling</span>
 </div>
-
+</div>
 
 **Projects:**
 
