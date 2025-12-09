@@ -5,7 +5,7 @@ title: cv
 nav: true
 nav_order: 2
 cv_pdf: latest_CV.pdf # you can also use external links here
-description: 
+description:
 toc:
   sidebar: left
 ---

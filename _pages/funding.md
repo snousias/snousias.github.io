@@ -13,6 +13,7 @@ toc:
 <!-- _pages/research_results.md -->
 
 ### table of contents
+
 - [3D Machine learning and Computer Vision](/results/#GDL)
 - [AI & Machine Learning in the Built Environment](/results/#AIBE)
 - [Doctoral Dissertation](/results/#PHD)
@@ -27,12 +28,11 @@ toc:
   <h4 class="year" id="GDL" style="padding-top:2em">3D Machine learning  
   and Computer Vision</h4>
 
-  {% bibliography -f papers -q @*[category_1=GDL || category_2=GDL]* %}
-
+{% bibliography -f papers -q @*[category_1=GDL || category_2=GDL]* %}
 
   <h4 class="year" id="AIBE" style="padding-top:2em">AI & Machine Learning in the Built Environment</h4>
 
-  {% bibliography -f papers -q @*[category_1=AIBE || category_2=AIBE]* %}
+{% bibliography -f papers -q @*[category_1=AIBE || category_2=AIBE]* %}
 
   <h4 class="year" id="PHD" style="padding-top:2em">Doctoral dissertation</h4>
 
@@ -43,27 +43,26 @@ toc:
     <li><strong>AI and Machine Learning in Healthcare and Medicine</strong></li>
   </ul>
 
-  {% bibliography -f papers -q @*[category_1=PHD || category_2=PHD]* %}
+{% bibliography -f papers -q @*[category_1=PHD || category_2=PHD]* %}
 
   <h4 class="year" id="BME" style="padding-top:2em">Computational Modelling and Simulation in Biomedical Engineering</h4>
 
-  {% bibliography -f papers -q @*[category_1=BME || category_2=BME]* %}
+{% bibliography -f papers -q @*[category_1=BME || category_2=BME]* %}
 
   <h4 class="year" id="MLHM" style="padding-top:2em">Machine Learning for Healthcare and Medicine</h4>
 
-  {% bibliography -f papers -q @*[category_1=MLHM || category_2=MLHM  || category_3=MLHM]* %}
-
+{% bibliography -f papers -q @*[category_1=MLHM || category_2=MLHM  || category_3=MLHM]* %}
 
   <h4 class="year" id="MCA" style="padding-top:2em">Efficient AI, Model Compression and Acceleration in DNNs</h4>
 
-  {% bibliography -f papers -q @*[category_1=MCA || category_2=MCA]* %}
+{% bibliography -f papers -q @*[category_1=MCA || category_2=MCA]* %}
 
   <h4 class="year" id="MCDI" style="padding-top:2em">Sparse Modelling for Data Imputation</h4>
 
-  {% bibliography -f papers -q @*[category_1=MCDI || category_2=MCDI]* %}
+{% bibliography -f papers -q @*[category_1=MCDI || category_2=MCDI]* %}
 
   <h4 class="year" id="Gamification" style="padding-top:2em">Application : Gamification</h4>
 
-  {% bibliography -f papers -q @*[category_1=Gamification || category_2=Gamification]* %}
+{% bibliography -f papers -q @*[category_1=Gamification || category_2=Gamification]* %}
 
 </div>

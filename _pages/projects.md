@@ -9,7 +9,6 @@ display_categories: [work, fun]
 horizontal: false
 ---
 
-
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   {% for category in page.display_categories %}
@@ -37,9 +36,7 @@ horizontal: false
 
 {% else %}
 
-
 {% assign sorted_projects = site.projects | sort: "importance" %}
-
 
 {% if page.horizontal %}
 
@@ -59,4 +56,3 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
-

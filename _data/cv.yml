@@ -51,7 +51,7 @@
       description:
         - Description 1.
         - Description 2.
-    
+
     - title: Research Associate
       institution: University of Patras, Greece
       year: 2019 - 2022
@@ -62,7 +62,6 @@
     - title: Research Assistant
       institution: University of Patras, Greece
       year: 2016 - 2019
-
 
 - title: Open Source Projects
   type: time_table
@@ -98,6 +97,3 @@
   type: list
   contents:
     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
-
-
-
