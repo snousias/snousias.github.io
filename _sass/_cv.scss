@@ -174,8 +174,8 @@ ul.timeline li {
 }
 
 span.badge-toc {
-  color: var(--global-bg-color);
-  background-color: var(--global-theme-color);
+  color: var(--global-theme-color); 
+  // background-color: var(--global-theme-color);
   border-radius: 0.125rem;
   padding: 0.125rem 0.5rem 0.125rem 0.5rem;
   font-weight: 700 !important;
