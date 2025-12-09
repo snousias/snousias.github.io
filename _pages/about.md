@@ -48,6 +48,7 @@ His research focuses on representation learning, computational modelling, machin
   <span>Computational Modelling</span>
 </div>
 
+
 Projects:
 - MyAirCoach (EU H2020 Grant agreement ID: 643607),
 - GamECAR (EU H2020 Grant agreement ID: 732068), 
