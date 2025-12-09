@@ -36,7 +36,7 @@ Dr. Stavros Nousias leads the Knowledge Representation and Reasoning research gr
 
 His work focuses on representation learning, computational modelling, machine learning, geometry processing, geometric deep learning, and computer vision.
 
-<div style="margin: 2rem 0;">
+<div style="margin: 3rem 0;">
 <p><i class="fas fa-tags" aria-hidden="true"></i> Keywords</p>
 <div class="badges">
   <span class="badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Representation Learning</span>
