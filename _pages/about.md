@@ -32,7 +32,22 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Dr. Stavros Nousias is a research scientist with a research focus in representation learning, computational modelling, machine learning, geometry processing and geometric deep learning and computer vision.  He completed his education at the University of Patras, earning his Diploma in Electrical & Computer Engineering, M.Sc. in Electronics & Information Processing, and Ph.D. in 2011, 2016, and 2022 respectively. He participated in multiple European and National research projects assuming progressively the roles of software engineer and systems developer, research engineer, research associate and research lead. Since 2022 he is postdoctoral researcher at the Chair of Computing in Civil and Building Engineering and research lead of the Knowledge Reasoning and Representation research group.
+Dr. Stavros Nousias is a computer scientist, postdoctoral researcher, and research lead of the Knowledge Representation and Reasoning research group within the Chair of Computing in Civil and Building Engineering at the Technical University of Munich.
+
+He earned his Diploma in Electrical and Computer Engineering, M.Sc. in Electronics and Information Processing, and Ph.D. from the University of Patras in 2011, 2016, and 2022, respectively. He has contributed to numerous European and national research projects, progressively serving as a software engineer and systems developer, research engineer, research associate, and research lead. 
+His research focuses on representation learning, computational modelling, machine learning, geometry processing, geometric deep learning, and computer vision.
+
+<div class="badges">
+  <span>Knowledge Representation</span>
+  <span>Reasoning</span>
+  <span>Representation Learning</span>
+  <span>Machine Learning</span>
+  <span>Geometric Deep Learning</span>
+  <span>Geometry Processing</span>
+  <span>Computer Vision</span>
+  <span>Computational Modelling</span>
+</div>
+
 Projects:
 - MyAirCoach (EU H2020 Grant agreement ID: 643607),
 - GamECAR (EU H2020 Grant agreement ID: 732068), 
