@@ -3,7 +3,8 @@ layout: about
 title: about
 permalink: /
 # subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-subtitle: <a href='https://www.cee.ed.tum.de/cms/team/stavros-nousias/' target="_blank">Postdoctoral Research Scientist at the Technical University of Munich </a><br> Arcisstrasse 21, 80333 Munich, Germany  
+subtitle: Computer Scientist <br> <a href='https://www.cee.ed.tum.de/cms/team/stavros-nousias/' target="_blank"> Postdoctoral Researcher</a> <br> Technical University of Munich <br> Chair of Computing in Civil and Building Engineering <br> TUM Georg Nemetschek Institute – AI for the Built World  <br> Arcisstrasse 21, 80333 München, Germany <br> https://www.cee.ed.tum.de/ccbe/team/stavros-nousias/
+
 
 profile:
   align: right
