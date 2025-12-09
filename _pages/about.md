@@ -43,7 +43,7 @@ His work focuses on representation learning, computational modelling, machine le
   <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Machine Learning</span>
   <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Geometric Deep Learning</span>
   <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Geometry Processing</span>
-  <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Computer Vision</span>
+  <!-- <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Computer Vision</span> -->
   <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Computational Modelling</span>
 </div>
 </div>
