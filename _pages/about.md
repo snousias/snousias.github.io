@@ -38,8 +38,6 @@ He earned his Diploma in Electrical and Computer Engineering, M.Sc. in Electroni
 His research focuses on representation learning, computational modelling, machine learning, geometry processing, geometric deep learning, and computer vision.
 
 <div class="badges">
-  <span>Knowledge Representation</span>
-  <span>Reasoning</span>
   <span>Representation Learning</span>
   <span>Machine Learning</span>
   <span>Geometric Deep Learning</span>
