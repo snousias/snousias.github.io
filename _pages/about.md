@@ -37,14 +37,14 @@ Dr. Stavros Nousias leads the Knowledge Representation and Reasoning research gr
 His work focuses on representation learning, computational modelling, machine learning, geometry processing, geometric deep learning, and computer vision.
 
 <div style="margin: 2rem 0;">
-<p><i class="fas fa-tags" aria-hidden="true"></i> Keywords</p>
+<!-- <p><i class="fas fa-tags" aria-hidden="true"></i> Keywords</p> -->
 <div class="badges">
-  <span class="badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Representation Learning</span>
-  <span class="badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Machine Learning</span>
-  <span class="badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Geometric Deep Learning</span>
-  <span class="badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Geometry Processing</span>
-  <span class="badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Computer Vision</span>
-  <span class="badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Computational Modelling</span>
+  <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Representation Learning</span>
+  <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Machine Learning</span>
+  <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Geometric Deep Learning</span>
+  <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Geometry Processing</span>
+  <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Computer Vision</span>
+  <span class="badge badge-toc"><i class="fas fa-tag" aria-hidden="true"></i> Computational Modelling</span>
 </div>
 </div>
 
