@@ -13,20 +13,139 @@
 
 
 
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.repository }}">
-    <img
-      class="only-light"
-      style="width: 40px;"
-      alt="{{ include.repository }}"
-      src="{{ '/assets/img/github-mark.png' | relative_url }}"
-    >
-    <img
-      class="only-dark"
-      style="width: 40px;"
-      alt="{{ include.repository }}"
-      src="{{ '/assets/img/github-mark-white.png' | relative_url }}"
-    >
-    {{ include.repository }}
+<div class="repo-card">
+  <a href="https://github.com/{{ include.repository }}" class="repo-link">
+    <div class="repo-content">
+      <div class="repo-icon">
+        <img
+          class="only-light github-icon"
+          alt="GitHub"
+          src="{{ '/assets/img/github-mark.png' | relative_url }}"
+        >
+        <img
+          class="only-dark github-icon"
+          alt="GitHub"
+          src="{{ '/assets/img/github-mark-white.png' | relative_url }}"
+        >
+      </div>
+      <div class="repo-info">
+        <h3 class="repo-title">{{ include.repository }}</h3>
+        <p class="repo-description">Click to view repository</p>
+      </div>
+    </div>
   </a>
 </div>
+
+<style>
+.repo-card {
+  width: 100%;
+  height: 100%;
+}
+
+.repo-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.repo-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  height: 100%;
+  min-height: 120px;
+}
+
+.repo-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.repo-icon .github-icon {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.repo-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.repo-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--global-text-color, #333);
+  line-height: 1.3;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.repo-description {
+  font-size: 0.9rem;
+  color: var(--global-text-color-light, #666);
+  margin: 0;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+/* Hover Effects */
+.repo-link:hover .github-icon {
+  transform: scale(1.1);
+}
+
+.repo-link:hover .repo-title {
+  color: var(--global-theme-color, #007bff);
+}
+
+.repo-link:hover .repo-description {
+  opacity: 1;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .repo-title {
+    color: var(--global-text-color, #fff);
+  }
+  
+  .repo-description {
+    color: var(--global-text-color-light, #ccc);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .repo-content {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .repo-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .repo-icon .github-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .repo-title {
+    font-size: 1rem;
+  }
+  
+  .repo-description {
+    font-size: 0.85rem;
+  }
+}
+</style>
