@@ -37,7 +37,7 @@ nav_order: 4
 
 {% if site.data.repositories.github_repos %}
 
-## Featured Repositories
+
 
 <div class="repositories-grid">
   {% for repo in site.data.repositories.github_repos %}
