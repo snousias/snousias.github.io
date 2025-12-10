@@ -44,9 +44,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-github-profile-and-repositories",
-          title: "Github profile and repositories",
-          description: "",
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Github profile and repositories",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
