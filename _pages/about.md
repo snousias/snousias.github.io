@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 # subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-subtitle: Computer Scientist, <a href='https://www.cee.ed.tum.de/cms/team/stavros-nousias/' target="_blank"> Postdoctoral Researcher and Research Group Leader </a> <br> Technical University of Munich <br> Arcisstrasse 21, 80333 München, Germany <br> <a href='https://www.cee.ed.tum.de/cms/team/stavros-nousias/' target="_blank"> https://www.cee.ed.tum.de/ccbe/team/stavros-nousias/ </a>
+subtitle: Computer Scientist,<br> <a href='https://www.cee.ed.tum.de/cms/team/stavros-nousias/' target="_blank"> Postdoctoral Researcher </a> <br> Technical University of Munich <br> Arcisstrasse 21, 80333 München, Germany <br> <a href='https://www.cee.ed.tum.de/cms/team/stavros-nousias/' target="_blank"> https://www.cee.ed.tum.de/ccbe/team/stavros-nousias/ </a>
 
 
 profile:
