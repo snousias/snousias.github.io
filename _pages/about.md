@@ -50,10 +50,10 @@ His work focuses on representation learning, computational modelling, machine le
 
 **Projects:**
 
-- MyAirCoach (EU H2020 Grant agreement ID: 643607),
+- <a href='https://cordis.europa.eu/article/id/241244-nextgeneration-asthma-inhalers' target="_blank"> MyAirCoach (EU H2020 Grant agreement ID: 643607)</a>,
 - GamECAR (EU H2020 Grant agreement ID: 732068), 
 - Ageing@Work (EU H2020 Grant agreement ID: 826299),
-- Take-a-Breath (NSRF 2014-2020 project code:T1EDK - 03832),
+- <a href='https://www.take-a-breath.gr/' target="_blank"> Take-a-Breath (NSRF 2014-2020 project code:T1EDK - 03832)</a>,
 - <a href='https://cordis.europa.eu/project/id/871738/reporting' target="_blank"> CPSoSaware (H2020 Grant agreement ID: 871738)</a>,
 - <a href='https://cordis.europa.eu/project/id/958478/results' target="_blank"> EnerMan (H2020 Grant agreement ID: 958478)</a>,
 - <a href='https://cordis.europa.eu/project/id/777981/results' target="_blank"> Warmest (Marie Skłodowska-Curie Actions Grant agreement ID: 777981) </a>,
