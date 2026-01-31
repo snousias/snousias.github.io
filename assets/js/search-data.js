@@ -123,6 +123,13 @@ ninja.data = [{
           window.open("https://scholar.google.com/citations?user=HQuAxd0AAAAJ", "_blank");
         },
       },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.webofscience.com/wos/author/record/JQV-8222-2023", "_blank");
+        },
+      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
