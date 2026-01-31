@@ -45,7 +45,7 @@ scholar_userid: HQuAxd0AAAAJ # your Google Scholar ID
 # x_username: # your X handle
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
-# custom_social: # can be any name here other than the ones already defined above
-#   logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
-#   title: Custom Social
-#   url: https://www.alberteinstein.com/
+custom_social: 
+  logo: /assets/img/logos/logo-wos.png
+  title: Web of Science
+  url: https://www.webofscience.com/wos/author/record/JQV-8222-2023
