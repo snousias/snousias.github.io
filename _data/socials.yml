@@ -46,6 +46,6 @@ scholar_userid: HQuAxd0AAAAJ # your Google Scholar ID
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
 custom_social: 
-  logo: /assets/img/logos/logo-wos.png
+  logo: /assets/img/logos/wos.png
   title: Web of Science
   url: https://www.webofscience.com/wos/author/record/JQV-8222-2023
