@@ -40,6 +40,19 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Social -->
+    {% if page.social %}
+      <h2>
+       contact
+      </h2>
+      <div class="social">
+        <div class="contact-icons">{% include social.liquid %}</div>
+
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
@@ -66,6 +79,9 @@ layout: default
 
     <!-- Social -->
     {% if page.social %}
+      <h2>
+       contact
+      </h2>
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
 
