@@ -49,9 +49,6 @@ toc:
   *AI-based analysis of construction plans to automate project data management*  
   Developed machine learning methods for plan type recognition, component identification, ontology-based classification, and automatic 3D model generation from construction drawings.
 
-- **[AutoTrust](https://cordis.europa.eu/project/id/101148123)** (2024-2027) | Horizon Europe  
-  *Autonomous self-adaptive services for TRansformational personalized inclUsivenesS and resilience in mobiliTy*  
-  Developing AI-powered self-adaptive vehicle technologies to enhance safety, accessibility, and user experience in automated mobility for inclusive transportation.
 
 - **[WARMEST](https://cordis.europa.eu/project/id/777981)** | H2020 MSCA-RISE  
   *loW Altitude Remote sensing for the Monitoring of the state of cultural hEritage Sites*  
