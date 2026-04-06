@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-research-results",
           title: "research results",
-          description: "Selected publications presented in chronological order.",
+          description: "Selected publications in thematic categories.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/results/";
@@ -105,11 +105,6 @@ ninja.data = [{
           description: "Analysis, modelling and sensing of both physiological and environmental factors for the customized and predictive self-management of Asthma",
           section: "Projects",handler: () => {
               window.location.href = "/projects/myAirCoach/";
-            },},{id: "projects-projects",
-          title: 'projects',
-          description: "Research projects in cyber-physical systems, energy efficiency, digital health, and cultural heritage preservation",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/";
             },},{
         id: 'social-dblp',
         title: 'DBLP',
