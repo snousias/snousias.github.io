@@ -4,7 +4,7 @@ title: CPSoSaware
 description: Cross-layer cognitive optimization tools & methods for the lifecycle support of dependable CPSoS
 img: assets/img/cpsosaware-400x400.jpg
 importance: 3
-category: work
+category: H2020 - Horizon Europe
 related_publications: true
 ---
 

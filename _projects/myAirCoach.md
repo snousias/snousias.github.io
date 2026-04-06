@@ -4,7 +4,7 @@ title: myAirCoach
 description: Analysis, modelling and sensing of both physiological and environmental factors for the customized and predictive self-management of Asthma
 img: assets/img/myaircoach1-400x400.jpg
 importance: 1
-category: work
+category: H2020 - Horizon Europe
 related_publications: true
 ---
 

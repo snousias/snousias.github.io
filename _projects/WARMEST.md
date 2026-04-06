@@ -4,7 +4,7 @@ title: WARMEST
 description: loW Altitude Remote sensing for the Monitoring of the state of cultural hEritage Sites - building an inTegrated model for maintenance
 img: assets/img/warmest-400x400.jpg
 importance: 6
-category: work
+category: H2020 - Horizon Europe
 related_publications: true
 ---
 

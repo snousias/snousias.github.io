@@ -4,7 +4,7 @@ title: GamECAR
 description: Gamification of EcoDriving Behaviours through Intelligent Management of dynamic car and driver information
 img: assets/img/gamecar-400x400.jpg
 importance: 5
-category: work
+category: H2020 - Horizon Europe
 related_publications: true
 ---
 

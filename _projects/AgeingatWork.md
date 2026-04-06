@@ -4,7 +4,7 @@ title: AgeingatWork
 description: Smart, Personalized and Adaptive ICT Solutions for Active, Healthy and Productive Ageing with enhanced Workability
 img: assets/img/ageingatwork-400x400.jpg
 importance: 2
-category: work
+category: H2020 - Horizon Europe
 related_publications: true
 ---
 

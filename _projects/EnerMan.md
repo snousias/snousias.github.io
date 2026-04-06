@@ -4,7 +4,7 @@ title: EnerMan
 description: ENERgy-efficient manufacturing system MANagement
 img: assets/img/enerman-400x400.jpg
 importance: 4
-category: work
+category: H2020 - Horizon Europe
 related_publications: true
 ---
 
