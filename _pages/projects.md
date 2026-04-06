@@ -11,7 +11,7 @@ toc:
 
 > **Note:** The projects listed below represent my participation as a staff researcher.
 
-<h2 class="category">H2020 & Horizon Europe Research Projects</h2>
+<h2 class="category" id="overview">H2020 & Horizon Europe Research Projects</h2>
 
 - **[myAirCoach](https://cordis.europa.eu/project/id/643607)** (2015-2018)  
   *Analysis, modelling and sensing of both physiological and environmental factors for the customized and predictive self-management of Asthma*  
@@ -41,7 +41,7 @@ toc:
 
 <div class="publications">
 
-<h2 class="category">Publications per funding mandate</h2>
+<h2 class="category" id="Funding">Publications per funding mandate</h2>
 
   <h4 class="year" id="myAirCoach" style="padding-top:2em">myAirCoach</h4>
 
