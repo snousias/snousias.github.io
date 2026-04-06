@@ -9,6 +9,8 @@ display_categories: [work, fun]
 horizontal: false
 ---
 
+> **Note:** The projects listed below represent my participation as a staff researcher.
+
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   {% for category in page.display_categories %}
