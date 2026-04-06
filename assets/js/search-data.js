@@ -75,7 +75,32 @@ ninja.data = [{
           section: "News",},{id: "news-new-preprint-on-predictive-modeling-bim-command-recommendation-based-on-large-scale-usage-logs",
           title: 'New preprint on “Predictive Modeling: BIM Command Recommendation Based on Large-scale Usage Logs”!...',
           description: "",
-          section: "News",},{id: "projects-myaircoach",
+          section: "News",},{id: "projects-ageingatwork",
+          title: 'AgeingatWork',
+          description: "Smart, Personalized and Adaptive ICT Solutions for Active, Healthy and Productive Ageing with enhanced Workability",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/AgeingatWork/";
+            },},{id: "projects-cpsosaware",
+          title: 'CPSoSaware',
+          description: "Cross-layer cognitive optimization tools &amp; methods for the lifecycle support of dependable CPSoS",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/CPSoSaware/";
+            },},{id: "projects-enerman",
+          title: 'EnerMan',
+          description: "ENERgy-efficient manufacturing system MANagement",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/EnerMan/";
+            },},{id: "projects-gamecar",
+          title: 'GamECAR',
+          description: "Gamification of EcoDriving Behaviours through Intelligent Management of dynamic car and driver information",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/GamECAR/";
+            },},{id: "projects-warmest",
+          title: 'WARMEST',
+          description: "loW Altitude Remote sensing for the Monitoring of the state of cultural hEritage Sites - building an inTegrated model for maintenance",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/WARMEST/";
+            },},{id: "projects-myaircoach",
           title: 'myAirCoach',
           description: "Analysis, modelling and sensing of both physiological and environmental factors for the customized and predictive self-management of Asthma",
           section: "Projects",handler: () => {
