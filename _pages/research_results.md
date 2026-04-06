@@ -2,7 +2,7 @@
 layout: page
 permalink: /results/
 title: research results
-description: Selected publications presented in chronological order.
+description: Selected publications in thematic categories.
 years: [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2016]
 nav: true
 dropdown: false
