@@ -58,9 +58,8 @@ toc:
 
 ---
 
+## Publications per funding mandate
 <div class="publications">
-
-<h2> Publications per funding mandate</h2>
 
   <h3 id="myAirCoach" style="padding-top:1em">myAirCoach</h3>
 
