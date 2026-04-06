@@ -2,76 +2,54 @@
 layout: page
 title: projects
 permalink: /projects/
-description:  Research projects in cyber-physical systems, energy efficiency, digital health, and cultural heritage preservation
+description: Research projects in cyber-physical systems, energy efficiency, digital health, and cultural heritage preservation
 nav: true
-years: [2026,2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2016]
 nav_order: 3
-display_categories: [H2020 - Horizon Europe]
-horizontal: true
 toc:
   sidebar: left
 ---
 
 > **Note:** The projects listed below represent my participation as a staff researcher.
 
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+<h2 class="category">H2020 & Horizon Europe Research Projects</h2>
 
-{% else %}
+- **[myAirCoach](https://cordis.europa.eu/project/id/643607)** (2015-2018)  
+  *Analysis, modelling and sensing of both physiological and environmental factors for the customized and predictive self-management of Asthma*  
+  The project aimed to develop a holistic mHealth personalised asthma monitoring system empowering patients to manage their own health through automated monitoring of clinical, behavioural and environmental factors.
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+- **[GamECAR](https://cordis.europa.eu/project/id/732068)** (2017-2018)  
+  *Gamification of EcoDriving Behaviours through Intelligent Management of dynamic car and driver information*  
+    The project aimed to create an innovative Serious Games platform for eco-friendly driving using OBD sensors, environmental monitoring, and cognitive modeling for personalized driver engagement.
 
-{% if page.horizontal %}
+- **[AgeingatWork](https://cordis.europa.eu/project/id/826299)** (2019-2022)  
+  *Smart, Personalized and Adaptive ICT Solutions for Active, Healthy and Productive Ageing with enhanced Workability*  
 
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
 
+- **[CPSoSaware](https://cordis.europa.eu/project/id/871738)** (2020-2022)  
+  *Cross-layer cognitive optimization tools & methods for the lifecycle support of dependable CPSoS*  
+  The project aimed to created AI-driven tools for resource allocation in Cyber-physical Systems of Systems, evaluated in automotive and manufacturing sectors with extended reality interfaces.
+
+- **[EnerMan](https://cordis.europa.eu/project/id/958478)** (2021-2024)  
+  *ENERgy-efficient manufacturing system MANagement*  
+  The project aimed to develope comprehensive framework integrating big data analytics, predictive engines, and intelligent decision support for optimizing energy consumption in manufacturing processes.
+
+- **[WARMEST](https://cordis.europa.eu/project/id/777981)** (H2020 MSCA-RISE)  
+  *loW Altitude Remote sensing for the Monitoring of the state of cultural hEritage Sites*  
+   The project aimed to optimized maintenance procedures for cultural heritage sites (Alhambra, Santa Croce, Marzamemi) using low altitude remote sensing and Decision Support Systems.
+
+---
 
 <div class="publications">
+
+<h2 class="category">Publications per funding mandate</h2>
 
   <h4 class="year" id="myAirCoach" style="padding-top:2em">myAirCoach</h4>
 
 {% bibliography -f papers -q @*[projects=myAirCoach ]* %}
 
-  <h4 class="year" id="GamECar" style="padding-top:2em">GamECar</h4>
+  <h4 class="year" id="GamECAR" style="padding-top:2em">GamECAR</h4>
 
-{% bibliography -f papers -q @*[projects=GamECar ]* %}
+{% bibliography -f papers -q @*[projects=GamECAR ]* %}
 
   <h4 class="year" id="CPSoSAware" style="padding-top:2em">CPSoSAware</h4>
 
