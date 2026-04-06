@@ -41,7 +41,7 @@ toc:
 
 <div class="publications">
 
-## Publications per funding mandate
+<h2> Publications per funding mandate</h2>
 
   <h3 id="myAirCoach" style="padding-top:1em">myAirCoach</h3>
 
@@ -87,9 +87,6 @@ toc:
 
 {% bibliography -f papers -q @*[projects=AICHECK ]* %}
 
-  <h3 id="AutoTrust" style="padding-top:1em">AutoTrust</h3>
-
-{% bibliography -f papers -q @*[projects=AutoTrust ]* %}
 
   <h3 id="DrawOn" style="padding-top:1em">DrawOn</h3>
 
