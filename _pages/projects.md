@@ -43,17 +43,69 @@ toc:
 
 ## Publications per funding mandate
 
-  <h4 class="year" id="myAirCoach" style="padding-top:2em">myAirCoach</h4>
+  <h3 id="myAirCoach" style="padding-top:1em">myAirCoach</h3>
 
 {% bibliography -f papers -q @*[projects=myAirCoach ]* %}
 
-  <h4 class="year" id="GamECAR" style="padding-top:2em">GamECAR</h4>
+  <h3 id="GamECAR" style="padding-top:1em">GamECAR</h3>
 
 {% bibliography -f papers -q @*[projects=GamECAR ]* %}
 
-  <h4 class="year" id="CPSoSAware" style="padding-top:2em">CPSoSAware</h4>
+  <h3 id="AgeingatWork" style="padding-top:1em">Ageing@Work</h3>
 
-{% bibliography -f papers -q @*[projects=CPSoSAware ]* %}
+{% bibliography -f papers -q @*[projects=Ageing@Work ]* %}
+
+  <h3 id="CPSoSaware" style="padding-top:1em">CPSoSaware</h3>
+
+{% bibliography -f papers -q @*[projects=CPSoSaware ]* %}
+
+  <h3 id="WARMEST" style="padding-top:1em">WARMEST</h3>
+
+{% bibliography -f papers -q @*[projects=WARMEST ]* %}
+
+  <h3 id="SmartWork" style="padding-top:1em">SmartWork</h3>
+
+{% bibliography -f papers -q @*[projects=SmartWork ]* %}
+
+  <h3 id="Take-A-Breath" style="padding-top:1em">Take-A-Breath</h3>
+
+{% bibliography -f papers -q @*[projects=Take-A-Breath ]* %}
+
+  <h3 id="PredictBIM" style="padding-top:1em">PredictBIM</h3>
+
+{% bibliography -f papers -q @*[projects=PredictBIM ]* %}
+
+  <h3 id="FORWARD" style="padding-top:1em">FORWARD</h3>
+
+{% bibliography -f papers -q @*[projects=FORWARD ]* %}
+
+  <h3 id="CoConstruct" style="padding-top:1em">CoConstruct</h3>
+
+{% bibliography -f papers -q @*[projects=CoConstruct ]* %}
+
+  <h3 id="AICHECK" style="padding-top:1em">AICHECK</h3>
+
+{% bibliography -f papers -q @*[projects=AICHECK ]* %}
+
+  <h3 id="AutoTrust" style="padding-top:1em">AutoTrust</h3>
+
+{% bibliography -f papers -q @*[projects=AutoTrust ]* %}
+
+  <h3 id="DrawOn" style="padding-top:1em">DrawOn</h3>
+
+{% bibliography -f papers -q @*[projects=DrawOn ]* %}
+
+  <h3 id="MyOlivGroveCoach" style="padding-top:1em">MyOlivGroveCoach</h3>
+
+{% bibliography -f papers -q @*[projects=MyOlivGroveCoach ]* %}
+
+  <h3 id="I3T" style="padding-top:1em">I3T</h3>
+
+{% bibliography -f papers -q @*[projects=I3T ]* %}
+
+  <h3 id="DEEP-EVIoT" style="padding-top:1em">DEEP-EVIoT</h3>
+
+{% bibliography -f papers -q @*[projects=DEEP-EVIoT ]* %}
 
 
 </div>
