@@ -11,7 +11,7 @@ toc:
 
 > **Note:** The projects listed below represent my participation as a staff researcher.
 
-## European & National Research Projects
+## European & National Research Projects (Staff researcher)
 
 - **[myAirCoach](https://cordis.europa.eu/project/id/643607)** (2015-2018) | H2020  
   *Analysis, modelling and sensing of both physiological and environmental factors for the customized and predictive self-management of Asthma*  
@@ -45,14 +45,16 @@ toc:
   *ENERgy-efficient manufacturing system MANagement*  
   Developed comprehensive framework integrating big data analytics, predictive engines, and intelligent decision support for optimizing energy consumption in manufacturing processes.
 
+- **[WARMEST](https://cordis.europa.eu/project/id/777981)** | H2020 MSCA-RISE  
+  *loW Altitude Remote sensing for the Monitoring of the state of cultural hEritage Sites*  
+  Optimized maintenance procedures for cultural heritage sites (Alhambra, Santa Croce, Marzamemi) using low altitude remote sensing and Decision Support Systems.
+
+## Industry & National Research Projects (Coordinating Postdoc)
+
 - **DrawOn** (2022-2025) | German Regional (BayVFP)  
   *AI-based analysis of construction plans to automate project data management*  
   Developed machine learning methods for plan type recognition, component identification, ontology-based classification, and automatic 3D model generation from construction drawings.
 
-
-- **[WARMEST](https://cordis.europa.eu/project/id/777981)** | H2020 MSCA-RISE  
-  *loW Altitude Remote sensing for the Monitoring of the state of cultural hEritage Sites*  
-  Optimized maintenance procedures for cultural heritage sites (Alhambra, Santa Croce, Marzamemi) using low altitude remote sensing and Decision Support Systems.
 
 ---
 
