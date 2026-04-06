@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "",
+          description: "Research projects in cyber-physical systems, energy efficiency, digital health, and cultural heritage preservation",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
