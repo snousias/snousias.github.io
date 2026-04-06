@@ -48,6 +48,9 @@ toc:
 {% bibliography -f papers -q @*[projects=myAirCoach ]* %}
 
   <h3 id="GamECAR" style="padding-top:1em">GamECAR</h3>
+  **[GamECAR](https://cordis.europa.eu/project/id/732068)** (2017-2018)  
+  *Gamification of EcoDriving Behaviours through Intelligent Management of dynamic car and driver information*  
+    The project aimed to create an innovative Serious Games platform for eco-friendly driving using OBD sensors, environmental monitoring, and cognitive modeling for personalized driver engagement.
 
 {% bibliography -f papers -q @*[projects=GamECAR ]* %}
 
