@@ -128,6 +128,7 @@ toc:
 
   <h3 id="PredictBIM" style="padding-top:1em">PredictBIM</h3>
 
+  <strong><a href="https://www.cee.ed.tum.de/ccbe/research/research-groups/knowledge-representation-and-reasoning/ai-based-automation-of-repetitive-design-steps-in-bim-modeling/">PredictBIM</a></strong>: AI-based automation of repetitive design steps in BIM modeling
 {% bibliography -f papers -q @*[projects=PredictBIM ]* %}
 
   <h3 id="FORWARD" style="padding-top:1em">FORWARD</h3>
