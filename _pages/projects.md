@@ -138,6 +138,9 @@ toc:
 
   <h3 id="CoConstruct" style="padding-top:1em">CoConstruct</h3>
 
+  <strong><a href="https://web.tum.de/inw/innovation-networks-im-ueberblick/coconstruct/">CoConstruct</a></strong>: Collaborative Construction
+
+
 {% bibliography -f papers -q @*[projects=CoConstruct ]* %}
 
   <h3 id="AI4CADCAM" style="padding-top:1em">AI4CADCAM</h3>
