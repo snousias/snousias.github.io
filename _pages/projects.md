@@ -110,9 +110,7 @@ toc:
 
 {% bibliography -f papers -q @*[projects=CPSoSaware ]* %}
 
-  <h3 id="EnerMan" style="padding-top:1em">EnerMan</h3>
-
-{% bibliography -f papers -q @*[projects=EnerMan ]* %}
+  <hr style="margin-top: 2.5rem; margin-bottom: 2rem; border: 0; border-top: 1px solid currentColor; opacity: 0.2;">
 
   <h3 id="WARMEST" style="padding-top:1em">WARMEST</h3>
 
