@@ -116,9 +116,19 @@ toc:
 
   <h3 id="WARMEST" style="padding-top:1em">WARMEST</h3>
 
+  <p><strong><a href="https://warmestproject.eu/">WARMEST</a></strong>—loW Altitude Remote sensing for the Monitoring of the state of cultural hEritage Sites: building an inTegrated model for maintenance—is an H2020 Marie Curie Research and Innovation Staff Mobility Project (H2020 Marie Skłodowska-Curie Actions, RISE 2017).</p>
+
+  <p>The WARMEST project is carried out by an international and multi-sectorial consortium formed by more than 30 researchers belonging to 3 academic institutions, 5 private companies, and 3 associations from 4 different countries.</p>
+
+  <p>In close cooperation with the consortium, 3 heritage sites are involved in the research: Patronato de la Alhambra y Generalife (Granada, Spain), Marzamemi Underwater Museum (Sicily, Italy), and Opera Santa Croce (Florence, Italy).</p>
+
+  <p>WARMEST’s strategic goal is to optimize maintenance procedures in cultural and natural heritage sites through the introduction of new technologies to collect data and new tools to analyse it, creating a novel Decision Support System. This software enables stakeholders to set, on sound economic and technical bases, the most suitable maintenance procedures taking into account current and future scenarios. It thus helps prepare sound and cost-effective maintenance plans, given that maintenance of monuments and sites is a challenging management and engineering activity due to the large variety of loads (different types of sites and actions), strict regulations to preserve natural, archaeological, and historical values, and continuous operation throughout the year.</p>
+
 {% bibliography -f papers -q @*[projects=WARMEST ]* %}
 
- <h3 id="Take-A-Breath" style="padding-top:1em">Take-A-Breath</h3>
+  <h3 id="Take-A-Breath" style="padding-top:1em">Take-A-Breath</h3>
+
+  <strong><a href="https://www.iti.gr/iti/en/project/take-a-breath-en/">Take-A-Breath</a></strong>: Smart Platform for Self-management and Support of Patients with Chronic Respiratory Diseases
 
 {% bibliography -f papers -q @*[projects=Take-A-Breath ]* %}
   
@@ -146,14 +156,15 @@ toc:
 
   <h3 id="AI4CADCAM" style="padding-top:1em">AI4CADCAM</h3>
 
+  <strong><a href="https://www.cee.ed.tum.de/ccbe/research/research-groups/knowledge-representation-and-reasoning/ai4cadcam/">AI4CADCAM</a></strong>: AI-based processing of CAD models for automated planning of computer-aided manufacturing
+
 {% bibliography -f papers -q @*[projects=AI4CADCAM ]* %}
 
-  <h3 id="BIM-Automation" style="padding-top:1em">BIM Automation</h3>
 
-{% bibliography -f papers -q @*[projects=BIM-Automation ]* %}
 
   <h3 id="AICHECK" style="padding-top:1em">AICHECK</h3>
 
+  <strong><a href="https://www.igsse.gs.tum.de/en/igsse/projects-and-teams/international-project-teams/cohort-2020/ai-check/">AICHECK</a></strong>: AI-enabled code compliance checking in early building design
 {% bibliography -f papers -q @*[projects=AICHECK ]* %}
 
 
