@@ -132,6 +132,8 @@ toc:
 
   <h3 id="FORWARD" style="padding-top:1em">FORWARD</h3>
 
+  **[FORWARD](https://www.cee.ed.tum.de/ccbe/research/research-groups/knowledge-representation-and-reasoning/forward/)**: Pedestrian dynamics prediction for safe and flow-efficient building design
+
 {% bibliography -f papers -q @*[projects=FORWARD ]* %}
 
   <h3 id="CoConstruct" style="padding-top:1em">CoConstruct</h3>
