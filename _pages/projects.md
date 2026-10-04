@@ -11,6 +11,29 @@ toc:
 
 <!-- > **Note:** The projects listed below represent my participation as a staff researcher. -->
 
+## Research Projects (Coordinating Postdoc)
+
+- **[CoConstruct](https://web.tum.de/inw/innovation-networks-im-ueberblick/coconstruct/)** (2021-2026) | TUM Innovation Network  
+  *Collaborative Construction*  
+  Interdisciplinary research network coordinated by Prof. Kathrin Dörfler exploring novel human-machine collaboration concepts to improve productivity, resource efficiency, and quality in construction. Combines human cognitive and sensory abilities with machine learning and robotic technologies for automated design, planning, and construction.
+
+- **[DrawOn](https://www.cee.ed.tum.de/ccbe/research/research-groups/knowledge-representation-and-reasoning/drawon/)** (2022-2025) | BayVFP Bavaria  
+  *AI-based analysis of construction plans to automate project data management*  
+  Coordinates development of AI and Big Data methods to analyze construction drawings using machine learning for plan type recognition, component identification, ontology-based classification, and automatic 3D model generation to optimize project data management.
+
+- **[FORWARD](https://www.cee.ed.tum.de/ccbe/research/research-groups/knowledge-representation-and-reasoning/forward/)** (2023-2027) | Georg Nemetschek Institute  
+  *Pedestrian dynamics prediction for safe and flow-efficient building design*  
+  Coordinates automation of pedestrian flow prediction in indoor/outdoor spaces using Machine Learning methods, enabling architects and engineers to interactively assess and optimize building designs for pedestrian traffic and evacuation scenarios.
+
+- **[AI4CADCAM](https://www.cee.ed.tum.de/ccbe/research/research-groups/knowledge-representation-and-reasoning/ai4cadcam/)** (2023-2026) | Bavarian Ministry of Economic Affairs  
+  *AI-based processing of CAD models for automated planning of computer-aided manufacturing*  
+  Coordinates automation of CAM planning through geometry-driven generative AI, leveraging Transformer architectures, CNNs, VAEs, and Graph Neural Networks to automate tool selection, orientation, and process parameter derivation from CAD models.
+
+- **[BIM Automation](https://www.cee.ed.tum.de/ccbe/research/research-groups/knowledge-representation-and-reasoning/ai-based-automation-of-repetitive-design-steps-in-bim-modeling/)** (2023-2027) | Nemetschek SE  
+  *AI-based automation of repetitive design steps in BIM modeling*  
+  Coordinates development of "learning-by-modeling" approach using AI to predict optimal sequences of modeling operations, providing recommendations to reduce time and effort in BIM modeling workflows.
+
+
 ## European & National Research Projects (Staff researcher)
 
 - **[myAirCoach](https://cordis.europa.eu/project/id/643607)** (2015-2018) | H2020  
@@ -48,28 +71,6 @@ toc:
 - **[WARMEST](https://cordis.europa.eu/project/id/777981)** | H2020 MSCA-RISE  
   *loW Altitude Remote sensing for the Monitoring of the state of cultural hEritage Sites*  
   Optimized maintenance procedures for cultural heritage sites (Alhambra, Santa Croce, Marzamemi) using low altitude remote sensing and Decision Support Systems.
-
-## Industry & National Research Projects (Coordinating Postdoc)
-
-- **[CoConstruct](https://web.tum.de/inw/innovation-networks-im-ueberblick/coconstruct/)** (2021-2026) | TUM Innovation Network  
-  *Collaborative Construction*  
-  Interdisciplinary research network coordinated by Prof. Kathrin Dörfler exploring novel human-machine collaboration concepts to improve productivity, resource efficiency, and quality in construction. Combines human cognitive and sensory abilities with machine learning and robotic technologies for automated design, planning, and construction.
-
-- **[DrawOn](https://www.cee.ed.tum.de/ccbe/research/research-groups/knowledge-representation-and-reasoning/drawon/)** (2022-2025) | BayVFP Bavaria  
-  *AI-based analysis of construction plans to automate project data management*  
-  Coordinates development of AI and Big Data methods to analyze construction drawings using machine learning for plan type recognition, component identification, ontology-based classification, and automatic 3D model generation to optimize project data management.
-
-- **[FORWARD](https://www.cee.ed.tum.de/ccbe/research/research-groups/knowledge-representation-and-reasoning/forward/)** (2023-2027) | Georg Nemetschek Institute  
-  *Pedestrian dynamics prediction for safe and flow-efficient building design*  
-  Coordinates automation of pedestrian flow prediction in indoor/outdoor spaces using Machine Learning methods, enabling architects and engineers to interactively assess and optimize building designs for pedestrian traffic and evacuation scenarios.
-
-- **[AI4CADCAM](https://www.cee.ed.tum.de/ccbe/research/research-groups/knowledge-representation-and-reasoning/ai4cadcam/)** (2023-2026) | Bavarian Ministry of Economic Affairs  
-  *AI-based processing of CAD models for automated planning of computer-aided manufacturing*  
-  Coordinates automation of CAM planning through geometry-driven generative AI, leveraging Transformer architectures, CNNs, VAEs, and Graph Neural Networks to automate tool selection, orientation, and process parameter derivation from CAD models.
-
-- **[BIM Automation](https://www.cee.ed.tum.de/ccbe/research/research-groups/knowledge-representation-and-reasoning/ai-based-automation-of-repetitive-design-steps-in-bim-modeling/)** (2023-2027) | Nemetschek SE  
-  *AI-based automation of repetitive design steps in BIM modeling*  
-  Coordinates development of "learning-by-modeling" approach using AI to predict optimal sequences of modeling operations, providing recommendations to reduce time and effort in BIM modeling workflows.
 
 
 ---
