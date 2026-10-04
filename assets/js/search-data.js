@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-results",
-          title: "results",
-          description: "Selected publications in thematic categories.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/results/";
-          },
         },{id: "nav-cv",
           title: "cv",
           description: "",
@@ -37,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-results",
+          title: "results",
+          description: "Selected publications in thematic categories.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/results/";
+          },
         },{id: "nav-blog",
           title: "blog",
           description: "",
@@ -50,6 +50,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
+          },
+        },{id: "nav-vision",
+          title: "vision",
+          description: "A research synthesis of computer vision, 2016-2026 - the task taxonomy, the shared pipeline and objective template, the key innovations era by era, and the six mechanisms that recur across all of them.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/computer-vision/";
           },
         },{id: "nav-teaching",
           title: "teaching",
