@@ -51,13 +51,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-star",
-          title: "STAR",
-          description: "State of the Art reports",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/star/";
-          },
         },{id: "nav-teaching",
           title: "teaching",
           description: "Academic teaching positions in chronological order.",
