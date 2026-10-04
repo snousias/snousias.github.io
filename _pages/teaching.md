@@ -7,7 +7,6 @@ nav: true
 nav_order: 6
 ---
 
-## Technical University of Munich
 
 ### [AI in Engineering](https://gitlab.lrz.de/tum-ccbe-krr/courses/BGU65009) <span class="course-code">BGU65009</span>
 
