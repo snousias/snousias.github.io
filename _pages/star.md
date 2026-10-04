@@ -3,7 +3,8 @@ layout: page
 permalink: /star/
 title: STAR
 description: State of the Art reports
-nav_order: 7
+nav: true
+nav_order: 5
 ---
 
 <!-- Edit the links in _data/star.yml - this page only renders them. -->
