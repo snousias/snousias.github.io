@@ -16,19 +16,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-publications",
-          title: "publications",
-          description: "Publications presented in reversed chronological order.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/publications/";
-          },
         },{id: "nav-projects",
           title: "projects",
           description: "Research projects in cyber-physical systems, energy efficiency, digital health, and cultural heritage preservation",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "Publications presented in reversed chronological order.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
           },
         },{id: "nav-results",
           title: "results",
@@ -64,6 +64,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
+          },
+        },{id: "nav-star",
+          title: "STAR",
+          description: "Collected links, grouped by topic.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/star/";
           },
         },{id: "post-a-post-with-math",
       
