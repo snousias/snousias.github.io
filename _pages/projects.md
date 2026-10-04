@@ -9,7 +9,7 @@ toc:
   sidebar: left
 ---
 
-> **Note:** The projects listed below represent my participation as a staff researcher.
+<!-- > **Note:** The projects listed below represent my participation as a staff researcher. -->
 
 ## European & National Research Projects (Staff researcher)
 
