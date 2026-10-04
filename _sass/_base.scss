@@ -295,6 +295,18 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
+  // Small vertical dash between menu items (desktop / expanded navbar only)
+  @media (min-width: 576px) {
+    .navbar-nav .nav-item + .nav-item::before {
+      content: "";
+      align-self: center;
+      flex: 0 0 auto;
+      width: 1px;
+      height: 0.9em;
+      background-color: var(--global-divider-color);
+    }
+  }
+
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
