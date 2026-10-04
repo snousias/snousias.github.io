@@ -51,26 +51,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-vision",
-          title: "vision",
-          description: "A research synthesis of computer vision, 2016-2026 - the task taxonomy, the shared pipeline and objective template, the key innovations era by era, and the six mechanisms that recur across all of them.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/computer-vision/";
-          },
         },{id: "nav-teaching",
           title: "teaching",
           description: "Academic teaching positions in chronological order.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
-          },
-        },{id: "nav-star",
-          title: "STAR",
-          description: "Collected links, grouped by topic.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/star/";
           },
         },{id: "post-a-post-with-math",
       
