@@ -1,0 +1,33 @@
+# Links shown on /star/.
+# Each group becomes a section on the page; each link becomes a box.
+# Only `name` and `url` are required - `description` and `tag` may be omitted.
+
+groups:
+  - title: Group one
+    description: Optional one-line note describing what this group collects.
+    links:
+      - name: First placeholder link
+        url: https://example.org/one
+        description: One line saying what this resource is and why it is here.
+        tag: dataset
+
+      - name: Second placeholder link
+        url: https://example.org/two
+        description: One line saying what this resource is and why it is here.
+        tag: tool
+
+      - name: Third placeholder link
+        url: https://example.org/three
+        description: One line saying what this resource is and why it is here.
+
+  - title: Group two
+    description: Optional one-line note describing what this group collects.
+    links:
+      - name: Fourth placeholder link
+        url: https://example.org/four
+        description: One line saying what this resource is and why it is here.
+        tag: paper
+
+      - name: Fifth placeholder link
+        url: https://example.org/five
+        description: One line saying what this resource is and why it is here.
