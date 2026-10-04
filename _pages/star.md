@@ -2,8 +2,7 @@
 layout: page
 permalink: /star/
 title: STAR
-description: Collected links, grouped by topic.
-nav: true
+description: State of the Art reports
 nav_order: 7
 ---
 
@@ -11,19 +10,31 @@ nav_order: 7
 
 {% for group in site.data.star.groups %}
 
+{% if group.title %}
+
 ## {{ group.title }}
+
+{% endif %}
 
 {% if group.description %}{{ group.description }}{% endif %}
 
 <div class="star-grid">
   {% for link in group.links %}
-    <a class="star-card" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+    {% assign external = false %}
+    {% if link.url contains '://' %}{% assign external = true %}{% endif %}
+    <a
+      class="star-card"
+      href="{% if external %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
+      {% if external %}target="_blank" rel="noopener noreferrer"{% endif %}
+    >
       <span class="star-name">{{ link.name }}</span>
       {% if link.description %}<span class="star-desc">{{ link.description }}</span>{% endif %}
-      <span class="star-foot">
-        <span class="star-host">{{ link.url | remove_first: 'https://' | remove_first: 'http://' | split: '/' | first | remove_first: 'www.' }}</span>
-        {% if link.tag %}<span class="star-tag">{{ link.tag }}</span>{% endif %}
-      </span>
+      {% if external or link.tag %}
+        <span class="star-foot">
+          {% if external %}<span class="star-host">{{ link.url | remove_first: 'https://' | remove_first: 'http://' | split: '/' | first | remove_first: 'www.' }}</span>{% else %}<span class="star-host"></span>{% endif %}
+          {% if link.tag %}<span class="star-tag">{{ link.tag }}</span>{% endif %}
+        </span>
+      {% endif %}
     </a>
   {% endfor %}
 </div>

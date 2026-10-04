@@ -3,7 +3,7 @@ layout: page
 permalink: /computer-vision/
 title: vision
 description: A research synthesis of computer vision, 2016-2026 - the task taxonomy, the shared pipeline and objective template, the key innovations era by era, and the six mechanisms that recur across all of them.
-nav: true
+nav: false
 nav_order: 6
 toc:
   sidebar: left

@@ -1,33 +1,12 @@
 # Links shown on /star/.
 # Each group becomes a section on the page; each link becomes a box.
-# Only `name` and `url` are required - `description` and `tag` may be omitted.
+# `title` and `description` on a group are optional - omit both for a bare grid.
+# On a link, only `name` and `url` are required.
+# A url without "://" is treated as internal: it opens in the same tab and
+# shows no hostname.
 
 groups:
-  - title: Group one
-    description: Optional one-line note describing what this group collects.
-    links:
-      - name: First placeholder link
-        url: https://example.org/one
-        description: One line saying what this resource is and why it is here.
-        tag: dataset
-
-      - name: Second placeholder link
-        url: https://example.org/two
-        description: One line saying what this resource is and why it is here.
-        tag: tool
-
-      - name: Third placeholder link
-        url: https://example.org/three
-        description: One line saying what this resource is and why it is here.
-
-  - title: Group two
-    description: Optional one-line note describing what this group collects.
-    links:
-      - name: Fourth placeholder link
-        url: https://example.org/four
-        description: One line saying what this resource is and why it is here.
-        tag: paper
-
-      - name: Fifth placeholder link
-        url: https://example.org/five
-        description: One line saying what this resource is and why it is here.
+  - links:
+      - name: Computer Vision
+        url: /computer-vision/
+        description: A research synthesis of computer vision, 2016-2026 - the task taxonomy, the shared pipeline and objective template, the key innovations.
