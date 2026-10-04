@@ -3,7 +3,7 @@ layout: page
 permalink: /star/
 title: STAR
 description: Collected links, grouped by topic.
-nav: true
+nav: false
 nav_order: 7
 ---
 
