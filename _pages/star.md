@@ -3,7 +3,7 @@ layout: page
 permalink: /star/
 title: STAR
 description: State of the Art reports
-nav: true
+nav: false
 nav_order: 5
 ---
 
