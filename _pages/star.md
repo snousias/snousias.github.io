@@ -1,9 +1,9 @@
 ---
 layout: page
-permalink: /star/
-title: STAR
+permalink: /notes/
+title: notes
 description: State of the Art reports
-nav: false
+nav: true
 nav_order: 5
 ---
 
