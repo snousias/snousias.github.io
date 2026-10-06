@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 permalink: /notes/
 title: notes
 description: State of the Art reports
@@ -7,9 +7,16 @@ nav: true
 nav_order: 5
 ---
 
-<!-- Edit the links in _data/star.yml - this page only renders them. -->
+<!-- Edit the links in _data/notes.yml - this page only renders them. -->
 
-{% for group in site.data.star.groups %}
+<div class="post">
+
+  <div class="header-bar">
+    <h1>{{ page.title }}</h1>
+    <h2>{{ page.description }}</h2>
+  </div>
+
+{% for group in site.data.notes.groups %}
 
 {% if group.title %}
 
@@ -19,21 +26,21 @@ nav_order: 5
 
 {% if group.description %}{{ group.description }}{% endif %}
 
-<div class="star-grid">
+<div class="notes-grid">
   {% for link in group.links %}
     {% assign external = false %}
     {% if link.url contains '://' %}{% assign external = true %}{% endif %}
     <a
-      class="star-card"
+      class="notes-card"
       href="{% if external %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
       {% if external %}target="_blank" rel="noopener noreferrer"{% endif %}
     >
-      <span class="star-name">{{ link.name }}</span>
-      {% if link.description %}<span class="star-desc">{{ link.description }}</span>{% endif %}
+      <span class="notes-name">{{ link.name }}</span>
+      {% if link.description %}<span class="notes-desc">{{ link.description }}</span>{% endif %}
       {% if external or link.tag %}
-        <span class="star-foot">
-          {% if external %}<span class="star-host">{{ link.url | remove_first: 'https://' | remove_first: 'http://' | split: '/' | first | remove_first: 'www.' }}</span>{% else %}<span class="star-host"></span>{% endif %}
-          {% if link.tag %}<span class="star-tag">{{ link.tag }}</span>{% endif %}
+        <span class="notes-foot">
+          {% if external %}<span class="notes-host">{{ link.url | remove_first: 'https://' | remove_first: 'http://' | split: '/' | first | remove_first: 'www.' }}</span>{% else %}<span class="notes-host"></span>{% endif %}
+          {% if link.tag %}<span class="notes-tag">{{ link.tag }}</span>{% endif %}
         </span>
       {% endif %}
     </a>
@@ -42,15 +49,18 @@ nav_order: 5
 
 {% endfor %}
 
+</div>
+
 <style>
-  .star-grid {
+  /* the grid needs breathing room under the header-bar rule */
+  .notes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.25rem;
-    margin: 1.5rem 0 2.5rem;
+    margin: 2.5rem 0;
   }
 
-  .star-card {
+  .notes-card {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -67,8 +77,8 @@ nav_order: 5
       box-shadow 0.2s ease;
   }
 
-  .star-card:hover,
-  .star-card:focus-visible {
+  .notes-card:hover,
+  .notes-card:focus-visible {
     transform: translateY(-3px);
     border-color: var(--global-theme-color);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
@@ -76,25 +86,25 @@ nav_order: 5
     color: var(--global-text-color);
   }
 
-  .star-card:focus-visible {
+  .notes-card:focus-visible {
     outline: 2px solid var(--global-theme-color);
     outline-offset: 2px;
   }
 
-  .star-name {
+  .notes-name {
     font-weight: 600;
     line-height: 1.3;
     color: var(--global-theme-color);
   }
 
-  .star-desc {
+  .notes-desc {
     font-size: 0.9rem;
     line-height: 1.45;
     color: var(--global-text-color);
   }
 
   /* pins the footer to the bottom so cards in a row line up */
-  .star-foot {
+  .notes-foot {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -105,13 +115,13 @@ nav_order: 5
     color: var(--global-text-color-light);
   }
 
-  .star-host {
+  .notes-host {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  .star-tag {
+  .notes-tag {
     flex: 0 0 auto;
     padding: 0.1rem 0.5rem;
     border: 1px solid var(--global-divider-color);
@@ -120,12 +130,12 @@ nav_order: 5
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .star-card {
+    .notes-card {
       transition: none;
     }
 
-    .star-card:hover,
-    .star-card:focus-visible {
+    .notes-card:hover,
+    .notes-card:focus-visible {
       transform: none;
     }
   }

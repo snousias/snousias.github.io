@@ -1,4 +1,4 @@
-# Links shown on /star/.
+# Links shown on /notes/.
 # Each group becomes a section on the page; each link becomes a box.
 # `title` and `description` on a group are optional - omit both for a bare grid.
 # On a link, only `name` and `url` are required.
