@@ -46,7 +46,7 @@ ninja.data = [{
           },
         },{id: "nav-notes",
           title: "notes",
-          description: "State of the Art reports",
+          description: "A review space for AI papers and novel approaches",
           section: "Navigation",
           handler: () => {
             window.location.href = "/notes/";
