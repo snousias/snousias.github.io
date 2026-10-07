@@ -1,8 +1,9 @@
 ---
 layout: default
 permalink: /notes/
-title: notes
-description: State of the Art reports
+title: notes # the navbar label
+header_title: Digest # the big header on the page itself
+description: A review space for AI papers and novel approaches
 nav: true
 nav_order: 5
 ---
@@ -11,9 +12,14 @@ nav_order: 5
 
 <div class="post">
 
+{% assign header = page.header_title | default: page.title %}
+{% assign subtitle = page.header_subtitle | default: page.description %}
+
   <div class="header-bar">
-    <h1>{{ page.title }}</h1>
-    <h2>{{ page.description }}</h2>
+    <h1>{{ header }}</h1>
+    {% unless subtitle == blank or subtitle == header %}
+      <h2>{{ subtitle }}</h2>
+    {% endunless %}
   </div>
 
 {% for group in site.data.notes.groups %}
