@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HodgeFormer</title>
+    <meta name="description"
+        content="HodgeFormer: Transformers for Learnable Operators on Triangular Meshes through Data-Driven Hodge Matrices">
+    <meta name="keywords" content="HodgeFormer, Geometric Deep Learning, Transformers, Mesh">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
+
+    <style>
+      .section {
+        padding: 1.5rem 1.5rem;
+      }
+      .hero .hero-body {
+        padding: 1.5rem 1.5rem;
+      }
+      .title.is-3 {
+        margin-bottom: 1rem;
+      }
+      .content {
+        margin-top: 1rem;
+      }
+      table td, table th {
+        text-align: right;
+      }
+      .references ol {
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+      .references li {
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+      .references a {
+        color: #3273dc;
+        text-decoration: none;
+      }
+      .references a:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+          },
+          options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+        };
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body" style="padding-top: 2rem;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">HodgeFormer: Transformers for Learnable Operators on Triangular Meshes through Data-Driven Hodge Matrices</h1>
+          <h2 class="title is-6 publication-subtitle">WACV2026</h2> 
+          <div class="is-size-5 publication-authors" style="margin-bottom: 1rem;">
+            <span class="author-block">
+                Akis Nousias<sup>1</sup>,
+            </span>
+            <span class="author-block">
+                Stavros Nousias<sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>K3Y Labs,</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>2</sup>Technical University of Munich</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://openreview.net/forum?id=PCbFYiMhlO" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-comments"></i>
+                  </span>
+                  <span>Openreview</span>
+                </a>
+              </span> -->
+              <!-- Paper Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2509.01839" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Presentation Link. -->
+              <span class="link-block">
+                <a href="static/presentation/WACV%202026%20HodgeFormer%20Presentation.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Presentation</span>
+                </a>
+              </span>
+              <!-- Poster Link. -->
+              <span class="link-block">
+                <a href="static/poster/WACV%202026%20HodgeFormer%20Poster.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+              <!-- Talk Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=RCwoLy-3qwc" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-video"></i>
+                  </span>
+                  <span>Talk</span>
+                </a>
+              </span>
+              <!-- WACV2026 Link. -->
+              <span class="link-block">
+                <a href="https://wacv.thecvf.com/virtual/2026/poster/683" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-comments"></i>
+                  </span>
+                  <span>WACV2026</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/hodgeformer/hodgeformer" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img src="static/images/banner.jpg" alt="HodgeFormer Architecture Overview">
+      <h2 class="subtitle has-text-centered">
+        A Transformer-based architecture for learning operators on triangular meshes.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-5 has-text-centered">Video Presentation</h2>
+        <div class="has-text-centered">
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/RCwoLy-3qwc" title="HodgeFormer WACV 2026 Presentation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-5">Abstract</h2>
+        <div class="content has-text-justified">
+          <p class="is-size-6">
+            Currently, prominent Transformer architectures applied on graphs and meshes for shape analysis tasks employ traditional attention layers that heavily utilize spectral features requiring costly eigenvalue decomposition-based methods. To encode the mesh structure, these methods derive positional embeddings, that heavily rely on eigenvalue decomposition based operations, e.g. on the Laplacian matrix, or on heat-kernel signatures, which are then concatenated to the input features. This paper proposes a novel approach inspired by the explicit construction of the Hodge Laplacian operator in Discrete Exterior Calculus as a product of discrete Hodge operators and exterior derivatives, i.e. \((L:=\star_{0}^{-1} d_{0}^{T} \star_{1} d_{0})\). We adjust the Transformer architecture in a novel deep learning layer that utilizes the multi-head attention mechanism to approximate Hodge matrices \(\star_{0}\), \(\star_{1}\) and \(\star_{2}\) and learn families of discrete operators \(L\) that act on mesh vertices, edges and faces. Our approach results in a computationally-efficient architecture that achieves comparable performance in mesh segmentation and classification tasks, through a direct learning framework, while eliminating the need for costly eigenvalue decomposition operations or complex preprocessing operations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
+
+
+
+    
+    <!-- Problem Statement. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-5">Problem Statement</h2>
+        <div class="content has-text-justified">
+          <p class="is-size-6">
+                Existing methods for 3D mesh analysis using spectral features rely on costly eigendecomposition of Laplacian matrices, creating a computational bottleneck and exhibiting high complexity. Alternatives convolutional based methods are often constrained by architectural limitations: some require specific mesh connectivity to construct their operators or use fixed operators that cannot adapt to the underlying data. On the other hand, modern Transformer-based approaches like MeT <a href="#ref-vecchio2023met">[9]</a> still depend on pre-computed spectral features for positional encoding. This reliance on expensive, rigid, and often complex preprocessing steps limits the efficiency, scalability, and flexibility of deep learning on meshes.
+            </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Problem Statement. -->
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-5">Core Contribution</h2>
+       
+        <div class="content has-text-justified">
+          <p class="is-size-6">The foundational work of HodgeNet by Smirnov and Solomon <a href="#ref-smirnov2021hodgenet">[4]</a> demonstrated the effectiveness of applying Laplacian operators from Discrete Exterior Calculus (DEC) to triangular 3D meshes. In their approach, input features are used to learn diagonal Hodge Star operators, which then construct Laplacian operators applied to the features in a spectral learning framework.</p>
+
+<p class="is-size-6">Most common constructions of discrete Hodge Star operators are limited to diagonal matrices, representing only some specific Hodge operator realizations. The Galerkin method, widely used in Finite Element Methods (FEM) literature, prescribes systematic ways to discretize various differential operators, including the Hodge operator. The key idea is to project onto carefully designed basis functions (e.g., piecewise linear or higher order elements) and account for the overlap of these basis functions. These overlaps are used to design the mass matrix, which acts as a discrete Hodge operator. Unlike the diagonal Hodge operator, which considers only self-contributions, the Galerkin Hodge operator incorporates contributions from neighboring elements, resulting in a sparse, non-diagonal matrix.</p>
+
+<p class="is-size-6">The projection with matrices \(W_Q\), \(W_K\), \(W_V\) onto a learned space corresponds to a basis projection as in the Galerkin method, and the self-attention mechanism \(Q \cdot K^T\) encodes pairwise interactions and accounts for overlaps of the basis functions. If the self-attention mechanism is localized, then it aligns with Galerkin-style discretizations <a href="#ref-cao2021choose">[20]</a>.</p>
+
+<p class="is-size-6">This paper introduces a novel Transformer architecture that leverages the explicit construction of Laplacian operators from Discrete Exterior Calculus (DEC) on triangular 3D meshes, drawing connections between discrete Hodge Star operators and Transformer-style attention mechanisms through Galerkin-inspired discretizations. The proposed architecture includes a novel Transformer-inspired layer that enables information propagation directly on the manifold through attention-based learnable Hodge Star matrices and incidence matrices, which serve as discrete exterior derivatives. By incorporating the structure considerations into the architecture, we do not rely at all on eigen-decomposition based methods, spectral features, or preprocessing steps, while achieving competitive performance compared to state-of-the-art approaches on meshes.</p>
+        </div>
+
+
+        <!-- <a href="#ref-auchmann2006geometrically">[17]</a>, <a href="#ref-mohamed2016comparison">[18]</a>, <a href="#ref-lim2020hodge">[19]</a> -->
+
+      </div>
+    </div>
+
+ 
+
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column">
+                <h2 class="title is-5">Results</h2>
+                <div class="content has-text-justified">
+                    <h4 class="title is-6" style="text-align: left; margin-top: 2rem;">Performance</h4>
+                    
+                    <p class="is-size-6">
+                      Performance of different methods on mesh classification and mesh segmentation tasks. Mesh classification is evaluated on the 30-class SHREC11 dataset evaluated on splits of 10 samples per class (split-10) and the Cube Engraving dataset. HodgeFormer achieves results comparable to the state-of-the-art without spectral features, eigenvalue decomposition operations or complex complementary structures. We report their base architecture, the mesh elements they operate on (v: vertices, e: edges, f: faces) and whether they depend on eigen-decomposition methods. The abbreviation "trns" denotes the transformer architecture. 
+                    </p>
+
+
+
+                    
+                    <div style="overflow-x: auto;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Type</th>
+                                    <th>Acts On</th>
+                                    <th>Eigen Decomp.</th>
+                                    <th>SHREC11 (split-10)</th>
+                                    <th>Cube Engrav.</th>
+                                    <th>Human Simplified</th>
+                                    <th>COSEG Vases</th>
+                                    <th>COSEG Chairs</th>
+                                    <th>COSEG Aliens</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HodgeNet <a href="#ref-smirnov2021hodgenet">[4]</a></td>
+                                    <td>mlp</td>
+                                    <td>v</td>
+                                    <td>Yes</td>
+                                    <td>94.7%</td>
+                                    <td>n/a</td>
+                                    <td>85.0%</td>
+                                    <td>90.3%</td>
+                                    <td>95.7%</td>
+                                    <td>96.0%</td>
+                                </tr>
+                                <tr>
+                                    <td>DiffusionNet <a href="#ref-sharp2020diffusion">[5]</a></td>
+                                    <td>mlp</td>
+                                    <td>v</td>
+                                    <td>Yes</td>
+                                    <td>99.5%</td>
+                                    <td>n/a</td>
+                                    <td>90.8%</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                </tr>
+                                <tr>
+                                    <td>LaplacianNet <a href="#ref-qiao1910laplaciannet">[6]</a></td>
+                                    <td>mlp</td>
+                                    <td>v</td>
+                                    <td>Yes</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                    <td>92.2%</td>
+                                    <td>94.2%</td>
+                                    <td>93.9%</td>
+                                </tr>
+                                <tr>
+                                    <td>Laplacian2Mesh <a href="#ref-dong2023laplacian2mesh">[7]</a></td>
+                                    <td>cnn</td>
+                                    <td>v</td>
+                                    <td>Yes</td>
+                                    <td>100.0%</td>
+                                    <td>91.5%</td>
+                                    <td>88.6%</td>
+                                    <td>94.6%</td>
+                                    <td>96.6%</td>
+                                    <td>95.0%</td>
+                                </tr>
+                                <tr>
+                                    <td>MeT <a href="#ref-vecchio2023met">[9]</a></td>
+                                    <td>tms</td>
+                                    <td>f</td>
+                                    <td>Yes</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                    <td>99.8%</td>
+                                    <td>98.9%</td>
+                                    <td>99.3%</td>
+                                </tr>
+                                <tr>
+                                    <td>MeshCNN <a href="#ref-hanocka2019meshcnn">[1]</a></td>
+                                    <td>cnn</td>
+                                    <td>e</td>
+                                    <td>No</td>
+                                    <td>91.0%</td>
+                                    <td>92.2%</td>
+                                    <td>85.4%</td>
+                                    <td>92.4%</td>
+                                    <td>93.0%</td>
+                                    <td>96.3%</td>
+                                </tr>
+                                <tr>
+                                    <td>PD-MeshNet <a href="#ref-milano2020primal">[2]</a></td>
+                                    <td>cnn</td>
+                                    <td>ef</td>
+                                    <td>No</td>
+                                    <td>99.1%</td>
+                                    <td>94.4%</td>
+                                    <td>85.6%</td>
+                                    <td>95.4%</td>
+                                    <td>97.2%</td>
+                                    <td>98.2%</td>
+                                </tr>
+                                <tr>
+                                    <td>MeshWalker <a href="#ref-lahav2020meshwalker">[3]</a></td>
+                                    <td>rnn</td>
+                                    <td>v</td>
+                                    <td>No</td>
+                                    <td>97.1%</td>
+                                    <td>98.6%</td>
+                                    <td>n/a</td>
+                                    <td>99.6%</td>
+                                    <td>98.7%</td>
+                                    <td>99.1%</td>
+                                </tr>
+                                <tr>
+                                    <td>SubDivNet <a href="#ref-hu2022subdivision">[8]</a></td>
+                                    <td>cnn</td>
+                                    <td>f</td>
+                                    <td>No</td>
+                                    <td>99.5%</td>
+                                    <td>98.9%</td>
+                                    <td>91.7%</td>
+                                    <td>96.7%</td>
+                                    <td>96.7%</td>
+                                    <td>97.3%</td>
+                                </tr>
+                                <!-- <tr>
+                                    <td>EMNN (MC+H) <a href="#ref-trang20243">[11]</a></td>
+                                    <td>gnn</td>
+                                    <td>ef</td>
+                                    <td>No</td>
+                                    <td>100%†</td>
+                                    <td>n/a</td>
+                                    <td>88.7%†</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                </tr>
+                                <tr>
+                                    <td>EGNN (MC+H) <a href="#ref-satorras2021n">[10]</a></td>
+                                    <td>gnn</td>
+                                    <td>ef</td>
+                                    <td>No</td>
+                                    <td>99.6%†</td>
+                                    <td>n/a</td>
+                                    <td>87.2%†</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                </tr> -->
+                                <tr>
+                                    <td>HodgeFormer (ours)</td>
+                                    <td>tms</td>
+                                    <td>vef</td>
+                                    <td>No</td>
+                                    <td>98.7%</td>
+                                    <td>95.3%</td>
+                                    <td>90.3%</td>
+                                    <td>94.3%</td>
+                                    <td>98.8%</td>
+                                    <td>98.3%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                
+                   
+                    <h3 class="title is-6" style="text-align: left; margin-top: 2rem; margin-bottom: 1rem;">Qualitative Results</h3>
+                  <div style="overflow-x: auto;">
+                
+               
+                            <img src="assets/images/hodgeformer-human_simplified-run-ljw7kqbr-200_results.png" alt="hodgeformer-human_simplified-run-ljw7kqbr-200_results" style="width: 90%; height: auto; margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;">
+                         
+                  </div>
+             
+                
+                    <h3 class="title is-6" style="text-align: left; margin-top: 2rem;">Robustness to Perturbations</h3>
+                    <p class="is-size-6">
+                        HodgeFormer demonstrates strong robustness to common mesh corruptions, showing minimal performance degradation when subjected to various types of noise and simplification.
+                    </p>
+                    <p class="is-size-6">Performance degradation on Human dataset:</p>
+                    <ul>
+                        <li class="is-size-6">Gaussian noise (\(\lambda=0.01\)): -3.0%</li>
+                        <li class="is-size-6">Face removal (20%): -8.7%</li>
+                        <li class="is-size-6">QEM remeshing (1000 faces): -3.1%</li>
+                        <li class="is-size-6">Patch removal: -3.5%</li>
+                    </ul>
+                </div>
+
+              
+
+                
+
+                 
+                  <h3 class="title is-6" style="text-align: left; margin-top: 2rem; margin-bottom: 1rem;">Robustness to missing parts</h3>
+                  <div style="overflow-x: auto;">
+                    <img src="assets/images/hodgeformer-human_simplified-incomplete-model-results-two-meshes_horizontal.png" alt="hodgeformer-human_simplified-incomplete-model-results-two-meshes_horizontal" style="width: 90%; height: auto; margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;">
+                   
+                  </div>
+                
+                  <h3 class="title is-6" style="text-align: left; margin-top: 2rem; margin-bottom: 1rem;">Robustness to noise and change of topology</h3>
+                  <div style="overflow-x: auto;">
+                   
+                        
+                            <img src="assets/images/robustness_to_noise_and_topology_alterations.png" alt="robustness_to_noise_and_topology_alterations" style="width: 90%; height: auto; margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;">
+                  </div>
+
+
+
+
+
+
+                </div>
+
+                
+
+
+                
+
+               
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section" id="References">
+  <div class="container is-max-desktop content"> 
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+    <h2 class="title is-5">References</h2>
+    <div class="references">
+      <ol>
+        <li id="ref-hanocka2019meshcnn">
+          Rana Hanocka, Amir Hertz, Noa Fish, Raja Giryes, Shachar Fleishman, and Daniel Cohen-Or. 
+          <strong>MeshCNN: a network with an edge.</strong> 
+          <em>ACM Transactions on Graphics</em>, 38(4):1–12, 2019.
+        </li>
+        
+        <li id="ref-milano2020primal">
+          Federico Milano, Antonio Loquercio, Antoni Rosinol, Davide Scaramuzza, and Luca Carlone.
+          <strong>Primal-dual mesh convolutional neural networks.</strong>
+          <em>Advances in Neural Information Processing Systems</em>, 33:952–963, 2020.
+        </li>
+        
+        <li id="ref-lahav2020meshwalker">
+          Alon Lahav and Ayellet Tal.
+          <strong>MeshWalker: deep mesh understanding by random walks.</strong>
+          <em>ACM Transactions on Graphics</em>, 39(6):1–13, 2020.
+        </li>
+        
+        <li id="ref-smirnov2021hodgenet">
+          Dmitriy Smirnov and Justin Solomon.
+          <strong>HodgeNet: Learning spectral geometry on triangle meshes.</strong>
+          <em>ACM Transactions on Graphics</em>, 40(4):1–11, 2021.
+        </li>
+        
+        <li id="ref-sharp2020diffusion">
+          Nicholas Sharp and Keenan Crane.
+          <strong>A Laplacian for nonmanifold triangle meshes.</strong>
+          <em>Computer Graphics Forum</em>, 39(5):69–80, 2020.
+        </li>
+        
+        <li id="ref-qiao1910laplaciannet">
+          Yu-Shen Liu, Yi Fang, and Zhizhong Han.
+          <strong>LaplacianNet: Learning on 3D meshes with Laplacian encoding and pooling.</strong>
+          <em>IEEE Transactions on Visualization and Computer Graphics</em>, 28(2):1317–1327, 2022.
+        </li>
+        
+        <li id="ref-dong2023laplacian2mesh">
+          Qingyu Dong, Hao Su, and Leonidas Guibas.
+          <strong>Laplacian2Mesh: Laplacian-based mesh understanding.</strong>
+          <em>arXiv preprint arXiv:2305.15066</em>, 2023.
+        </li>
+        
+        <li id="ref-hu2022subdivision">
+          Shi-Min Hu, Zheng-Ning Liu, Meng-Hao Guo, Jia-Xian Yao, Baining Guo, and Taku Komura.
+          <strong>Subdivision-based mesh convolution networks.</strong>
+          <em>ACM Transactions on Graphics</em>, 41(3):1–16, 2022.
+        </li>
+        
+        <li id="ref-vecchio2023met">
+          Gianmarco Vecchio, Simone Melzi, Jacopo Pio Gargano, Gabriel Curio, Artiom Kowatsch, and Michael M. Bronstein.
+          <strong>MeT: A Graph Transformer for Mesh Segmentation.</strong>
+          <em>Computer Graphics Forum</em>, 42(5):177–188, 2023.
+        </li>
+        
+        <!-- <li id="ref-satorras2021n">
+          Victor Garcia Satorras, Emiel Hoogeboom, and Max Welling.
+          <strong>E(n) Equivariant Graph Neural Networks.</strong>
+          <em>International Conference on Machine Learning</em>, pages 9323–9332, 2021.
+        </li>
+        
+        <li id="ref-trang20243">
+          Thuan Trang, Daniel Organisciak, Shubhendu Trivedi, Angelica I. Aviles-Rivero, and Carola-Bibiane Schönlieb.
+          <strong>Equivariant Mesh Neural Networks for 3D Shape Analysis.</strong>
+          <em>arXiv preprint arXiv:2312.05616</em>, 2024.
+        </li>
+        
+        <li id="ref-defferrard2016convolutional">
+          Michaël Defferrard, Xavier Bresson, and Pierre Vandergheynst.
+          <strong>Convolutional neural networks on graphs with fast localized spectral filtering.</strong>
+          <em>Advances in Neural Information Processing Systems</em>, 29:3844–3852, 2016.
+        </li>
+        
+        <li id="ref-levie2018cayleynets">
+          Ron Levie, Federico Monti, Xavier Bresson, and Michael M. Bronstein.
+          <strong>CayleyNets: Graph convolutional neural networks with complex rational spectral filters.</strong>
+          <em>IEEE Transactions on Signal Processing</em>, 67(1):97–109, 2018.
+        </li>
+        
+        <li id="ref-kostrikov2018surface">
+          Ilya Kostrikov, Zhongshi Jiang, Daniele Panozzo, Denis Zorin, and Joan Bruna.
+          <strong>Surface networks.</strong>
+          <em>Computer Vision and Pattern Recognition</em>, pages 2540–2548, 2018.
+        </li>
+        
+        <li id="ref-masci2015geodesic">
+          Jonathan Masci, Davide Boscaini, Michael Bronstein, and Pierre Vandergheynst.
+          <strong>Geodesic convolutional neural networks on Riemannian manifolds.</strong>
+          <em>International Conference on Computer Vision Workshops</em>, pages 37–45, 2015.
+        </li>
+        
+        <li id="ref-suli2000hp">
+          Endre Süli and David F. Mayers.
+          <strong>An introduction to numerical analysis.</strong>
+          <em>Cambridge University Press</em>, 2003.
+        </li>
+        
+        <li id="ref-auchmann2006geometrically">
+          Bernhard Auchmann and Stefan Kurz.
+          <strong>A geometrically defined discrete Hodge operator on simplicial cells.</strong>
+          <em>IEEE Transactions on Magnetics</em>, 42(4):643–646, 2006.
+        </li>
+        
+        <li id="ref-mohamed2016comparison">
+          Marwan S. Mohamed, Amr A. Hikal, and Eman A. Said.
+          <strong>Comparison of discrete Hodge star operators for electromagnetic problems.</strong>
+          <em>IEEE Transactions on Magnetics</em>, 52(3):1–4, 2016.
+        </li>
+        
+        <li id="ref-lim2020hodge">
+          Lek-Heng Lim.
+          <strong>Hodge Laplacians on graphs.</strong>
+          <em>SIAM Review</em>, 62(3):685–715, 2020.
+        </li>
+        
+        <li id="ref-cao2021choose">
+          Yue Cao, Zhenda Xie, Bin Xiao, Jianmin Wang, Han Hu, Yichen Wei, and Zheng Zhang.
+          <strong>How to choose your look: Attention mechanisms for human pose estimation.</strong>
+          <em>arXiv preprint arXiv:2103.02166</em>, 2021.
+        </li> -->
+      </ol>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{nousias2025hodgeformer,
+  author    = {Nousias, Akis and Nousias, Stavros},
+  title     = {HodgeFormer: Transformers for Learnable Operators on Triangular Meshes through Data-Driven Hodge Matrices},
+  journal   = {arXiv preprint},
+  year      = {2025}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p class="is-size-7">
+                This website is licensed under a <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p class="is-size-7">
+                Source code of this website is available : <a
+                    href="https://github.com/nerfies/nerfies.github.io">https://github.com/nerfies/nerfies.github.io</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
