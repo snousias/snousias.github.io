@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Hodge-Routed MoE</title>
+<meta content="Learnable Hodge-Laplacian Driven Mixture of Experts for Steady-PDE Surrogates on Coarse Unstructured Meshes" name="description"/>
+<meta content="Hodge Laplacian, Mixture of Experts, Neural Operators, PDE Surrogates, AirFRANS, Geometric Deep Learning" name="keywords"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet"/>
+<link href="./static/css/bulma.min.css" rel="stylesheet"/>
+<link href="./static/css/bulma-carousel.min.css" rel="stylesheet"/>
+<link href="./static/css/bulma-slider.min.css" rel="stylesheet"/>
+<link href="./static/css/fontawesome.all.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet"/>
+<link href="./static/css/index.css" rel="stylesheet"/>
+<link href="./static/images/favicon.svg" rel="icon"/>
+<style>
+      .section {
+        padding: 1.5rem 1.5rem;
+      }
+      .hero .hero-body {
+        padding: 1.5rem 1.5rem;
+      }
+      .title.is-3 {
+        margin-bottom: 1rem;
+      }
+      .content {
+        margin-top: 1rem;
+      }
+      table td, table th {
+        text-align: right;
+      }
+      .references ol {
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+      .references li {
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+      .references a {
+        color: #3273dc;
+        text-decoration: none;
+      }
+      .references a:hover {
+        text-decoration: underline;
+      }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script defer="" src="./static/js/fontawesome.all.min.js"></script>
+<script src="./static/js/bulma-carousel.min.js"></script>
+<script src="./static/js/bulma-slider.min.js"></script>
+<script src="./static/js/index.js"></script>
+<script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+          },
+          options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+        };
+      </script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<section class="hero">
+<div class="hero-body" style="padding-top: 2rem;">
+<div class="container is-max-desktop">
+<div class="columns is-centered">
+<div class="column has-text-centered">
+<h1 class="title is-2 publication-title">Learnable Hodge–Laplacian Driven Mixture of Experts for Steady-PDE Surrogates on Coarse Unstructured Meshes</h1>
+<h2 class="title is-6 publication-subtitle">Preprint</h2>
+<div class="is-size-5 publication-authors" style="margin-bottom: 1rem;">
+<span class="author-block">
+                Stavros Nousias<sup>1</sup>,
+            </span>
+<span class="author-block">
+                Akis Nousias<sup>2</sup>,
+            </span>
+<span class="author-block">
+                Konstantinos Gkrispanis<sup>1</sup>
+</span>
+</div>
+<div class="is-size-5 publication-authors">
+<span class="author-block"><sup>1</sup>Technical University of Munich,</span>
+</div>
+<div class="is-size-5 publication-authors">
+<span class="author-block"><sup>2</sup>K3Y Labs</span>
+</div>
+<div class="column has-text-centered">
+<div class="publication-links">
+<!-- Paper Link. -->
+<span class="link-block">
+<a class="external-link button is-normal is-rounded is-dark" href="https://arxiv.org/abs/2610.20585" target="_blank">
+<span class="icon">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span>Paper</span>
+</a>
+</span>
+
+<!-- Code Link. -->
+<span class="link-block">
+<a class="external-link button is-normal is-rounded is-dark" href="https://github.com/snousias/hodge-moe-pde/" target="_blank">
+<span class="icon">
+<i class="fab fa-github"></i>
+</span>
+<span>Code</span>
+</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="hero teaser">
+<div class="container is-max-desktop">
+<div class="hero-body">
+<img alt="Overview of the Hodge-routed mixture-of-experts architecture" id="fig-arch" src="assets/images/overview_landscape.png"/>
+<h2 class="subtitle has-text-centered">Overview of the model. The Hodge controller routes transformer experts that combine shared vertex embeddings with positional encodings at different frequency scales. Their representations are mixed and decoded into four fields. During training, a separate analyzer decomposes the reference fields into atoms, which a learned assignment combines into targets for the auxiliary expert heads (dashed path).</h2>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container is-max-desktop">
+<!-- Abstract. -->
+<div class="columns is-centered has-text-centered">
+<div class="column">
+<h2 class="title is-5">Abstract</h2>
+<div class="content has-text-justified"><p class="is-size-6">Surrogate models for steady partial differential equations on unstructured meshes often apply a single mixing mechanism to the whole solution. We propose a mixture of experts architecture supervised at different spectral scales. A controller that utilizes learnable laplacian matrices, referred to as Hodge Controller, receives the mesh geometry and input features and produces per-vertex weights that combine the expert representations. During training, a separate discrete Laplacian \(L_0=\star_0^{-1}d_0^{\!\top}\star_1d_0\) decomposes the reference fields into scale-dependent targets for auxiliary expert heads. We evaluate the model on AirFRANS, a steady Reynolds-averaged Navier–Stokes (RANS) airfoil benchmark, using remeshed triangular grids with approximately \(9.6\)k faces and \(4.9\)k vertices. On the official \(800/200\) split, our model achieves \(31\%\) lower relative \(L_2\) error and \(47\%\) lower interior mean squared error than Transolver on the same evaluation meshes, with approximately half as many parameters. Training allocations and checkpoint-selection procedures differ between our model and the baselines. Code: <a href="https://github.com/snousias/hodge-moe-pde/">https://github.com/snousias/hodge-moe-pde</a>.</p></div>
+</div>
+</div>
+<!--/ Abstract. -->
+<!-- Problem Statement. -->
+<!--/ Problem Statement. -->
+<!-- Core Contribution. -->
+<!--/ Core Contribution. -->
+</div>
+</section>
+<section class="section">
+<div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered">
+<div class="column">
+<h2 class="title is-5">Methodology</h2>
+<div class="content has-text-justified"><p class="is-size-6">We propose a mixture of transformer experts for steady-PDE prediction on unstructured meshes, with per-vertex weights computed by a learnable Laplacian controller. The model predicts velocity components \(u_x,u_y\), pressure \(p\), and turbulent kinematic viscosity \(\nu_t\) at the vertices of an unstructured mesh. It consists of a shared vertex embedding, eight transformer experts, a Hodge controller, and a field decoder (<a href="#fig-arch">Overview of the model</a>). A separate analyzer constructs auxiliary supervision targets during training.</p><p class="is-size-6">The prediction path consists of a shared vertex embedding, a Hodge controller, transformer experts, and a field decoder. The controller produces routing weights from vertex, edge, and face features together with the mesh incidence matrices and neighborhood indices. Each expert combines the shared embedding with fixed Fourier positional features and produces both a latent representation and an auxiliary band prediction. The routing weights combine the latent representations, which the decoder maps to the four output fields. During training, a separate diagonal-star vertex Laplacian smooths the reference fields to construct telescoping atoms. A learned assignment combines these atoms into expert-specific supervision targets. This analyzer is absent from inference, and its conductances receive no gradients from the training loss because the atoms are detached before assignment.</p><p class="is-size-6">The proposed VEF controller applies \(L_0\) to vertices, \(L_1=L_1^{\text{down}}+L_1^{\text{up}}\) to edges, and \(L_2^{\text{down}}\) to faces, using the incidence composition in <a href="https://arxiv.org/abs/2610.20585">Operator composition</a>. All Hodge attention updates read the pre-update streams and are computed simultaneously. The vertex-only configuration (\(V\)) applies the vertex Hodge attention update without edge or face Hodge attention updates. Its edge and face streams retain position-wise residual feedforward updates; edge features therefore continue to enter the vertex star. Both configurations produce routing logits from the final vertex stream.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered">
+<div class="column">
+<h2 class="title is-5">Results</h2>
+<div class="content has-text-justified">
+<h4 class="title is-6" style="text-align: left; margin-top: 2rem;">Simulation Setup</h4>
+<div><p class="is-size-6">AirFRANS <a href="#ref-bonnet2022airfrans">[1]</a> provides node positions, input features, and four solution fields. We generate anisotropic triangular working meshes with gmsh <a href="#ref-geuzaine2009gmsh">[16]</a>, using approximately \(4.9\)k vertices with refinement near the airfoil, and interpolate the reference fields onto them. Coordinates are embedded at \(z=0\) to construct the incidence matrices and geometric features.</p><p class="is-size-6">We use the official \(800/200\) split. Each training access selects one of up to eight available remeshes; evaluation uses a fixed mesh per case. Targets are scaled by the sample's freestream speed and standardized using training statistics, as specified in <a href="https://arxiv.org/abs/2610.20585">Input features</a>.</p><p class="is-size-6">Per-field relative \(L_2\) and \(R^2\) are evaluated in physical units. Volume and Surf are globally normalized mean squared errors on non-wall and wall vertices, respectively. We also report mesh-native relative lift-coefficient error and its Spearman correlation across test cases. All models are evaluated against interpolated targets on the same working meshes; these results are not directly comparable with original-mesh benchmark scores.</p><p class="is-size-6">The Hodge-routed configurations train on all \(800\) official training cases. Each time a training case is loaded, one of its available remeshes is selected, from a pool of up to eight. Evaluation uses a fixed mesh for each of the \(200\) official test cases. The external baselines reserve \(80\) of the \(800\) training cases for validation and train on the remaining \(720\). Their checkpoints are selected using validation errors.</p><p class="is-size-6">The reported Hodge-routed checkpoints are selected by mean relative \(L_2\) error on the \(200\) test cases: epoch \(560\) among \(30\) checkpoints for VEF, and epoch \(380\) among \(20\) checkpoints for \(V\). The reported test errors are therefore also used to choose the checkpoint. Error differences from the external baselines cannot be attributed to architecture alone because the training cases and checkpoint-selection procedures differ. The external all-input configuration has eight channels and omits the wall-indicator channel used by the Hodge-routed configurations (<a href="https://arxiv.org/abs/2610.20585">Input-Feature Ablation of the Baseline</a>).</p></div>
+<h4 class="title is-6" style="text-align: left; margin-top: 2rem;">Results</h4>
+<p class="is-size-6"><strong>Comparison on the official AirFRANS \(800/200\) split.</strong> Every row is evaluated on the same \(\approx4.9\)k-vertex working meshes and evaluation metrics. Baselines use their full input-feature arms; training and checkpoint-selection differences are specified in <a href="https://arxiv.org/abs/2610.20585">Simulation Setup</a>. <em>Mesh use</em> names how mesh structure reaches the prediction: <em>none</em> for a point-set model, <em>operator</em> when a learned Hodge Laplacian computes the fields, <em>router</em> when it computes only the mixing weights. \(C_L\) is the relative error of the mesh-native lift over the \(200\) test cases and \(\rho_L\) its Spearman correlation with the reference.</p>
+<div style="overflow-x: auto;">
+<table id="main-results">
+<thead>
+<tr>
+<th>Model</th>
+<th>Params</th>
+<th>Mesh Use</th>
+<th>rel-\(L_2\) ↓</th>
+<th>\(R^2\) ↑</th>
+<th>Volume ↓</th>
+<th>Surf ↓</th>
+<th>\(C_L\) ↓</th>
+<th>\(\rho_L\) ↑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transolver <a href="#ref-wu2024transolver">[2]</a></td>
+<td>6.00M</td>
+<td>none</td>
+<td>0.0436</td>
+<td>0.9953</td>
+<td>0.00265</td>
+<td><strong>0.00143</strong></td>
+<td><strong>0.0103</strong></td>
+<td><strong>0.99989</strong></td>
+</tr>
+<tr>
+<td>PointNet <a href="#ref-qi2017pointnet">[17]</a></td>
+<td>0.08M</td>
+<td>none</td>
+<td>0.0689</td>
+<td>0.9904</td>
+<td>0.00451</td>
+<td>0.00440</td>
+<td>0.0149</td>
+<td>0.99965</td>
+</tr>
+<tr>
+<td>Pointwise MLP</td>
+<td>0.02M</td>
+<td>none</td>
+<td>0.1743</td>
+<td>0.9404</td>
+<td>0.03576</td>
+<td>0.03969</td>
+<td>0.0860</td>
+<td>0.99338</td>
+</tr>
+<tr>
+<td>PSD-star HodgeFormer <a href="#ref-nousias2026hodgeformer">[11]</a></td>
+<td>0.47M</td>
+<td>operator</td>
+<td>0.0800</td>
+<td>0.9885</td>
+<td>0.01028</td>
+<td>0.01048</td>
+<td>0.0681</td>
+<td>0.99883</td>
+</tr>
+<tr>
+<td>Hodge-routed MoE (ours)</td>
+<td>3.02M</td>
+<td>router</td>
+<td><strong>0.0300</strong></td>
+<td><strong>0.9983</strong></td>
+<td><strong>0.00140</strong></td>
+<td>0.00164</td>
+<td>0.0225</td>
+<td>0.99988</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="is-size-6" style="margin-top: 1rem;"><a href="#main-results">Comparison on the official AirFRANS 800/200 split</a> compares the models on the official split. Our model has the lowest relative \(L_2\) error and the lowest interior mean squared error of the five, \(31\%\) and \(47\%\) below Transolver at half its parameter count. Transolver has the lower error on the two wall quantities, by a factor of \(1.14\) on the surface error and \(2.2\) on the lift coefficient. The fourth row is a HodgeFormer surrogate, which keeps the learned Hodge Laplacian in the prediction path. The per-field breakdown is given in full in the supplementary material: our model has the lowest relative \(L_2\) error on three of the four fields and the second lowest on \(u_y\), and the largest difference is on the eddy viscosity, the least accurate output of every model, where our error is \(46\%\) below Transolver's. The aggregate is the mean over the four fields. The fixed reference decomposition is illustrated for pressure in <a href="#fig-bands">The fixed reference decomposition</a>. The design was selected through ablations over the source of the gate, the width of the predictor, fixed against learned band boundaries, the guard against an empty band, and the number of cochain degrees the controller operates on, given in the supplementary material.</p>
+<h4 class="title is-6" style="text-align: left; margin-top: 2rem;">Per-Field Relative \(L_2\)</h4>
+<p class="is-size-6"><strong>Per-field relative \(L_2\) for selected models.</strong> Errors for the proposed VEF configuration, the vertex-only configuration (\(V\)), and comparison models. Metrics use the selected checkpoint of each run. Best values per field are in bold.</p>
+<div style="overflow-x: auto;">
+<table id="perfield-results">
+<thead>
+<tr>
+<th>Model</th>
+<th>\(u_x\)</th>
+<th>\(u_y\)</th>
+<th>\(p\)</th>
+<th>\(\nu_t\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hodge-routed MoE (ours)</td>
+<td><strong>0.0056</strong></td>
+<td>0.0259</td>
+<td><strong>0.0255</strong></td>
+<td><strong>0.0629</strong></td>
+</tr>
+<tr>
+<td>Hodge-routed MoE (VEF)</td>
+<td>0.0067</td>
+<td>0.0348</td>
+<td>0.0380</td>
+<td>0.0642</td>
+</tr>
+<tr>
+<td>Learned-band MoE</td>
+<td>0.0068</td>
+<td>0.0288</td>
+<td>0.0365</td>
+<td>0.0658</td>
+</tr>
+<tr>
+<td>Fixed-band MoE</td>
+<td>0.0068</td>
+<td>0.0312</td>
+<td>0.0346</td>
+<td>0.0679</td>
+</tr>
+<tr>
+<td>Transolver <a href="#ref-wu2024transolver">[2]</a></td>
+<td>0.0067</td>
+<td><strong>0.0220</strong></td>
+<td>0.0298</td>
+<td>0.1158</td>
+</tr>
+<tr>
+<td>Wide plain transformer</td>
+<td>0.0059</td>
+<td>0.0330</td>
+<td>0.0326</td>
+<td>0.1068</td>
+</tr>
+<tr>
+<td>PSD-star HodgeFormer <a href="#ref-nousias2026hodgeformer">[11]</a></td>
+<td>0.0149</td>
+<td>0.0650</td>
+<td>0.0852</td>
+<td>0.1548</td>
+</tr>
+<tr>
+<td>PointNet <a href="#ref-qi2017pointnet">[17]</a></td>
+<td>0.0125</td>
+<td>0.0540</td>
+<td>0.0655</td>
+<td>0.1435</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 class="title is-6" style="text-align: left; margin-top: 2rem; margin-bottom: 1rem;">Qualitative Comparison</h3>
+<div style="overflow-x: auto;">
+<img alt="Pressure and turbulent viscosity across models" id="fig-compare" src="assets/images/compare_models.png" style="width: 95%; height: auto; margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;"/>
+</div>
+<p class="is-size-6">Pressure \(p\) (top) and turbulent viscosity \(\nu_t\) (bottom) on the reference colour scales; left to right, the CFD reference, (a) our model, (b) Transolver, (c) PointNet, and (d) the best PSD-star HodgeFormer. Values beneath each model panel are mean relative \(L_2\) errors over the \(200\) test cases. The models differ more on \(\nu_t\) than on \(p\); the reference panel shows fine-scale structure in the \(\nu_t\) wake.</p>
+<h3 class="title is-6" style="text-align: left; margin-top: 2rem; margin-bottom: 1rem;">One Test Case at the Reported Checkpoint</h3>
+<div style="overflow-x: auto;">
+<img alt="Reference, prediction and absolute error for one test case" id="fig-qual" src="assets/images/v57_qual_case0.png" style="width: 90%; height: auto; margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;"/>
+</div>
+<p class="is-size-6"><strong>One test case at the reported checkpoint (epoch \(380\)).</strong> Columns are the reference, the prediction and the absolute error; rows are \(u_x\), \(u_y\), \(p\) and \(\nu_t\). All panels are on the model's own working mesh in physical units, with the reference and the prediction sharing each field's colour scale. The per-field relative \(L_2\) for this case is \(0.0047\), \(0.0260\), \(0.0281\) and \(0.0676\). Test-set means are listed in <a href="#perfield-results">Per-field relative L2 for selected models</a>; the panel illustrates one case rather than a test-set average.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered">
+<div class="column">
+<h2 class="title is-5">Routing and Supervision Diagnostics</h2>
+<div class="content has-text-justified">
+<p class="is-size-6">This section retains the analyzer, assignment, and gate diagnostics for the vertex-only configuration (\(V\)) at epoch \(380\). These figures and measurements do not describe the proposed VEF checkpoint at epoch \(560\). The analyzer's diagonal stars are</p>
+<h3 class="title is-6" style="text-align: left; margin-top: 2rem; margin-bottom: 1rem;">Routing Weights</h3>
+<div style="overflow-x: auto;">
+<img alt="Expert weights at each vertex for the vertex-only controller" id="fig-gate" src="assets/images/gate.png" style="width: 95%; height: auto; margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;"/>
+</div>
+<p class="is-size-6"><strong>Vertex-only gate \(g(v)\) at epoch \(380\).</strong> Top: dominant expert at each vertex, per-vertex gate entropy, and mean gate mass per expert against the uniform \(1/K\) line (vertical axis restricted to \(0.120\)–\(0.130\)). Bottom: the eight weight fields \(\gate_k(v)\). The dominant-expert panel displays an argmax of soft weights; all experts are evaluated. These panels describe routing for the displayed mesh rather than averages over the test set.</p>
+<h3 class="title is-6" style="text-align: left; margin-top: 2rem; margin-bottom: 1rem;">Vertex-only analyzer atoms at epoch 380</h3>
+<div style="overflow-x: auto;">
+<img alt="Nine components built from smoothed pressure fields" id="fig-atoms" src="assets/images/analyzer_atoms.png" style="width: 95%; height: auto; margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;"/>
+</div>
+<p class="is-size-6"><strong>Vertex-only analyzer atoms at epoch \(380\).</strong> Nine telescoping atoms for the illustrated pressure field. Atom \(0\) is the most-smoothed component; atoms \(1\)–\(7\) are differences between smoothing levels, and atom \(8\) is the residual after the fewest smoothing steps. The first and last components account for approximately \(81\%\) and \(14\%\) of the summed squared atom norms. Their sum reconstructs the field algebraically, subject to floating-point rounding (<a href="https://arxiv.org/abs/2610.20585">Decomposition and assignment</a>). The conductance network remains at initialization.</p>
+<h3 class="title is-6" style="text-align: left; margin-top: 2rem; margin-bottom: 1rem;">Analyzer and Assignment</h3>
+<div style="overflow-x: auto;">
+<img alt="Edge conductance, learned assignment and assigned targets" id="fig-operator" src="assets/images/analyzer_operator.png" style="width: 95%; height: auto; margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;"/>
+</div>
+<p class="is-size-6"><strong>Vertex-only analyzer and assignment at epoch \(380\).</strong> Edge conductance \(w_e\) from the initialized conductance network; the learned \(8\times9\) assignment \(P\) (<a href="https://arxiv.org/abs/2610.20585">Decomposition and assignment</a>); the eight assigned targets on a shared symmetric colour range; and normalized squared component norms before and after assignment. Global Xavier initialization overwrites the constructor's preferred assignment logits.</p>
+<h3 class="title is-6" style="text-align: left; margin-top: 2rem; margin-bottom: 1rem;">Fixed Reference Decomposition</h3>
+<div style="overflow-x: auto;">
+<img alt="Fixed frequency-band decomposition of the pressure field" id="fig-bands" src="assets/images/frequency_bands.png" style="width: 95%; height: auto; margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;"/>
+</div>
+<p class="is-size-6"><strong>The fixed reference decomposition</strong> of the pressure field with the ladder \((2,8,32)\) on the unweighted adjacency, for comparison with the vertex-only analyzer example in <a href="#fig-atoms">Vertex-only analyzer atoms at epoch 380</a>. This decomposition is independent of a trained controller checkpoint. The normalized squared component norms for this illustrated field are \([0.65,0.06,0.06,0.23]\); the components overlap.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered">
+<div class="column">
+<h2 class="title is-5">Discussion and Conclusion</h2>
+<div class="content has-text-justified"><p class="is-size-6">We propose a Hodge-routed mixture of transformer experts for steady-PDE prediction on unstructured meshes. A learned Hodge Laplacian computes the routing weights, and a separate analyzer constructs multiscale supervision targets. On the AirFRANS working mesh, mean relative \(L_2\) and interior mean squared errors decrease by \(31\%\) and \(47\%\) relative to Transolver, from \(0.0436\) to \(0.0300\) and from \(0.00265\) to \(0.00140\), respectively. The largest per-field improvement is in turbulent viscosity, whose relative \(L_2\) error decreases by approximately \(46\%\), from \(0.1158\) to \(0.0629\) (<a href="#perfield-results">Per-field relative L2 for selected models</a>). Introducing the Hodge controller into the learned-band mixture reduces mean relative \(L_2\) error from \(0.0345\) to \(0.0300\) (<a href="https://arxiv.org/abs/2610.20585">Complete Results</a>), with larger additional gains in velocity and pressure than in turbulent viscosity (<a href="#perfield-results">Per-field relative L2 for selected models</a>).</p><p class="is-size-6">The mean relative \(L_2\) error for pressure is lower than Transolver's, while surface and relative lift-coefficient errors are higher: \(0.00164\) versus \(0.00143\) and \(0.0225\) versus \(0.0103\), respectively (<a href="#main-results">Comparison on the official AirFRANS 800/200 split</a>). Both models retain lift rank correlations above \(0.9998\), preserving case ordering more accurately than force magnitudes. Pressure errors along the airfoil contour therefore require further examination.</p><p class="is-size-6">We follow Transolver's evaluation format on the official AirFRANS \(800/200\) split, with one training run per configuration and evaluation on a remeshed working mesh of approximately \(4.9\)K vertices. The results do not establish accuracy at the original CFD resolution or robustness across random seeds. The analyzer's algebraic target reconstruction holds independently of the controller's conditional spectral guarantee. The implementation does not enforce the reciprocal neighborhoods required by that guarantee, and prediction accuracy does not validate it. Every expert is evaluated, and dense attention scales quadratically with mesh size.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="References">
+<div class="container is-max-desktop content">
+<div class="columns is-centered has-text-centered">
+<div class="column">
+<h2 class="title is-5">References</h2>
+<div class="references">
+<ol>
+<li id="ref-bonnet2022airfrans">
+          Florent Bonnet, Jocelyn Ahmed Mazari, Paola Cinnella, and Patrick Gallinari.
+          <strong>AirFRANS: High fidelity computational fluid dynamics dataset for approximating Reynolds-averaged Navier–Stokes solutions.</strong>
+<em>Advances in Neural Information Processing Systems</em>, 2022.
+        </li>
+<li id="ref-wu2024transolver">
+          Haixu Wu, Huakun Luo, Haowen Wang, Jianmin Wang, and Mingsheng Long.
+          <strong>Transolver: A fast transformer solver for PDEs on general geometries.</strong>
+<em>International Conference on Machine Learning</em>, 2024.
+        </li>
+<li id="ref-raissi2019physics">
+          Maziar Raissi, Paris Perdikaris, and George Em Karniadakis.
+          <strong>Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.</strong>
+<em>Journal of Computational Physics</em>, 378:686–707, 2019.
+        </li>
+<li id="ref-kovachki2023neural">
+          Nikola Kovachki, Zongyi Li, Burigede Liu, Kamyar Azizzadenesheli, Kaushik Bhattacharya, Andrew Stuart, and Anima Anandkumar.
+          <strong>Neural operator: Learning maps between function spaces with applications to PDEs.</strong>
+<em>Journal of Machine Learning Research</em>, 24(89):1–97, 2023.
+        </li>
+<li id="ref-pfaff2021learning">
+          Tobias Pfaff, Meire Fortunato, Alvaro Sanchez-Gonzalez, and Peter W. Battaglia.
+          <strong>Learning mesh-based simulation with graph networks.</strong>
+<em>International Conference on Learning Representations</em>, 2021.
+        </li>
+<li id="ref-li2021fourier">
+          Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik Bhattacharya, Andrew Stuart, and Anima Anandkumar.
+          <strong>Fourier neural operator for parametric partial differential equations.</strong>
+<em>International Conference on Learning Representations</em>, 2021.
+        </li>
+<li id="ref-cao2021choose">
+          Shuhao Cao.
+          <strong>Choose a transformer: Fourier or Galerkin.</strong>
+<em>Advances in Neural Information Processing Systems</em>, 2021.
+        </li>
+<li id="ref-desbrun2005discrete">
+          Mathieu Desbrun, Anil N. Hirani, Melvin Leok, and Jerrold E. Marsden.
+          <strong>Discrete exterior calculus.</strong>
+<em>arXiv preprint math/0508341</em>, 2005.
+        </li>
+<li id="ref-smirnov2021hodgenet">
+          Dmitriy Smirnov and Justin Solomon.
+          <strong>HodgeNet: Learning spectral geometry on triangle meshes.</strong>
+<em>ACM Transactions on Graphics</em>, 40(4):1–11, 2021.
+        </li>
+<li id="ref-sharp2022diffusionnet">
+          Nicholas Sharp, Souhaib Attaiki, Keenan Crane, and Maks Ovsjanikov.
+          <strong>DiffusionNet: Discretization agnostic learning on surfaces.</strong>
+<em>ACM Transactions on Graphics</em>, 41(3):1–16, 2022.
+        </li>
+<li id="ref-nousias2026hodgeformer">
+          Akis Nousias and Stavros Nousias.
+          <strong>HodgeFormer: Transformers for learnable operators on triangular meshes through data-driven Hodge matrices.</strong>
+<em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2026.
+          <a href="https://arxiv.org/abs/2509.01839" target="_blank">arXiv:2509.01839</a>
+</li>
+<li id="ref-shazeer2017moe">
+          Noam Shazeer, Azalia Mirhoseini, Krzysztof Maziarz, Andy Davis, Quoc Le, Geoffrey Hinton, and Jeff Dean.
+          <strong>Outrageously large neural networks: The sparsely-gated mixture-of-experts layer.</strong>
+<em>International Conference on Learning Representations</em>, 2017.
+        </li>
+<li id="ref-fedus2022switch">
+          William Fedus, Barret Zoph, and Noam Shazeer.
+          <strong>Switch transformers: Scaling to trillion parameter models with simple and efficient sparsity.</strong>
+<em>Journal of Machine Learning Research</em>, 23(120):1–39, 2022.
+        </li>
+<li id="ref-hao2023gnot">
+          Zhongkai Hao, Zhengyi Wang, Hang Su, Chengyang Ying, Yinpeng Dong, Songming Liu, Ze Cheng, Jian Song, and Jun Zhu.
+          <strong>GNOT: A general neural operator transformer for operator learning.</strong>
+<em>International Conference on Machine Learning</em>, 2023.
+        </li>
+<li id="ref-wen2025geometry">
+          Shizheng Wen, Arsh Kumbhat, Levi Lingsch, Sepehr Mousavi, Yizhou Zhao, Praveen Chandrashekar, and Siddhartha Mishra.
+          <strong>Geometry aware operator transformer as an efficient and accurate neural surrogate for PDEs on arbitrary domains.</strong>
+<em>arXiv preprint arXiv:2505.18781</em>, 2025.
+        </li>
+<li id="ref-geuzaine2009gmsh">
+          Christophe Geuzaine and Jean-François Remacle.
+          <strong>Gmsh: A 3-D finite element mesh generator with built-in pre- and post-processing facilities.</strong>
+<em>International Journal for Numerical Methods in Engineering</em>, 79(11):1309–1331, 2009.
+        </li>
+<li id="ref-qi2017pointnet">
+          Charles R. Qi, Hao Su, Kaichun Mo, and Leonidas J. Guibas.
+          <strong>PointNet: Deep learning on point sets for 3D classification and segmentation.</strong>
+<em>Computer Vision and Pattern Recognition</em>, 2017.
+        </li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="BibTeX">
+<div class="container is-max-desktop content">
+<h2 class="title">BibTeX</h2>
+<pre><code>@article{nousias2026hodgemoepde,
+  author    = {Nousias, Stavros and Nousias, Akis and Gkrispanis, Konstantinos},
+  title     = {Learnable Hodge-Laplacian Driven Mixture of Experts for Steady-PDE Surrogates on Coarse Unstructured Meshes},
+  journal   = {arXiv preprint arXiv:2610.20585},
+  year      = {2026}
+}</code></pre>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="content has-text-centered">
+<p class="is-size-7">
+                This website is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+<p class="is-size-7">
+                Website template adapted from: <a href="https://github.com/nerfies/nerfies.github.io">https://github.com/nerfies/nerfies.github.io</a>
+</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
+
