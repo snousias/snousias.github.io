@@ -1,0 +1,12 @@
+{
+  "source_directory": "C:\\Users\\int\\Dropbox\\Workspace\\01_3DMLCV_part_B\\hodgeformer\\experiments\\regression_pdes_tetrahedral\\paper\\hodge_moe_pde_v8_NEURIPS_cleanup",
+  "conversion": "Pandoc LaTeX to HTML; no paraphrasing or copy editing",
+  "source_sha256": {
+    "arxiv.tex": "ad0751f6ea9550558711ab3b60db17ffdb31df5c9250b6f4e053d887e9d1b42b",
+    "arxiv.bbl": "aa0bb70ff1ceacb84a18e89e88ac2d67ea5a109e5697bbdc68164aeb43a42036",
+    "sections/00_abstract.tex": "5af37d1c60af010ea6cedecc30cc2be784f859c51f379e4b0b05d3f2d2b156d4",
+    "sections/overview.tex": "e3bcadc3f612091cf651036f18507d47b1bf7645fc29c6488e8d0625fee08fbf",
+    "sections/04_experiments.tex": "59742c8b6bdd6ab4a193291b369a93dd3b0839ad5e4db8fc043862203fdd138a",
+    "sections/qualitative_case.tex": "cfee32000dbafb48b3c8828d448615ab761cf535c650100fa161ee5c6a2fda54"
+  }
+}

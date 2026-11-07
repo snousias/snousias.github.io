@@ -159,3 +159,222 @@ body {
 table {
     font-size: 0.8rem;
 }
+
+/* Match the HodgeFormer publication layout, with responsive paper figures. */
+.section {
+  padding: 1.5rem;
+}
+
+.hero .hero-body {
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.publication-title {
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+.publication-subtitle {
+  margin-top: 1.25rem;
+}
+
+.author-list {
+  margin-bottom: 1rem;
+}
+
+.publication-links {
+  margin-top: 1.25rem;
+}
+
+.link-block {
+  display: inline-block;
+  margin: 0 0.1rem;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+}
+
+.content {
+  margin-top: 1rem;
+  line-height: 1.75;
+}
+
+.paper-text p {
+  text-align: justify;
+}
+
+.paper-text .paper-figure {
+  margin: 1.25rem 0 1.5rem;
+}
+
+.paper-text figcaption {
+  text-align: left;
+}
+
+.section-heading {
+  margin-top: 2rem;
+}
+
+.paper-figure {
+  margin: 1.25rem 0 1.5rem;
+}
+
+.paper-figure a {
+  display: block;
+}
+
+.paper-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.paper-figure figcaption,
+.figure-note {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-top: 0.85rem;
+}
+
+.teaser figcaption {
+  font-size: 1.15rem;
+  text-align: center;
+  max-width: 52rem;
+  margin: 1rem auto 0;
+}
+
+.equation {
+  overflow-x: auto;
+  padding: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.figure-note {
+  text-align: center;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+caption {
+  text-align: left;
+  color: #555;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  padding: 0 0 0.75rem;
+}
+
+td, th {
+  padding: 0.7rem 0.6rem;
+  text-align: right;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+thead th {
+  border-top: 2px solid #555;
+  border-bottom: 1px solid #777;
+  color: #363636;
+}
+
+th:first-child {
+  text-align: left;
+}
+
+tbody th {
+  font-weight: 400;
+}
+
+tbody tr:last-child > * {
+  border-bottom: 2px solid #555;
+}
+
+.ours {
+  background: #f3f7f9;
+}
+
+.ours th {
+  font-weight: 600;
+}
+
+.result-notes {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.model-labels {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  text-align: center;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+
+.figure-details {
+  border-top: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.figure-details:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.figure-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #363636;
+}
+
+a:focus-visible, summary:focus-visible, .table-scroll:focus-visible {
+  outline: 2px solid #3273dc;
+  outline-offset: 4px;
+}
+
+.footer {
+  margin-top: 1.5rem;
+  padding: 2rem 1.5rem;
+}
+
+pre {
+  overflow-x: auto;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 600px) {
+  .publication-title.title.is-2 {
+    font-size: 1.85rem;
+  }
+  .publication-authors.is-size-5 {
+    font-size: 1.05rem !important;
+  }
+  .content.has-text-justified {
+    text-align: left !important;
+  }
+  .paper-text p {
+    text-align: left;
+  }
+  .teaser figcaption {
+    font-size: 1rem;
+  }
+  .model-labels {
+    font-size: 0.6rem;
+    gap: 0.25rem;
+  }
+  td, th {
+    padding: 0.6rem 0.5rem;
+  }
+}
